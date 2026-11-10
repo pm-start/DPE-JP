@@ -123,14 +123,21 @@ const u16 gTMHMMoves[NUM_TMSHMS] =
 	MOVE_AURORAVEIL,	//118
 	MOVE_SKYDROP,		//119
 	MOVE_NATUREPOWER,	//120
-	MOVE_CUT,			//121
-	MOVE_FLY,			//122
-	MOVE_SURF,			//123
-	MOVE_STRENGTH,		//124
-	MOVE_DIVE,			//125
-	MOVE_ROCKSMASH,		//126
-	MOVE_WATERFALL,		//127
-	MOVE_ROCKCLIMB,		//128
+	MOVE_TEMPERFLARE,	//121 [hack] patches/0862 SV の TM 技（Redmine #59）
+	MOVE_SUPERCELLSLAM,	//122 [hack] patches/0862 SV の TM 技（Redmine #59）
+	MOVE_HARDPRESS,	//123 [hack] patches/0862 SV の TM 技（Redmine #59）
+	MOVE_DRAGONCHEER,	//124 [hack] patches/0862 SV の TM 技（Redmine #59）
+	MOVE_ALLURINGVOICE,	//125 [hack] patches/0862 SV の TM 技（Redmine #59）
+	MOVE_PSYCHICNOISE,	//126 [hack] patches/0862 SV の TM 技（Redmine #59）
+	MOVE_UPPERHAND,	//127 [hack] patches/0862 SV の TM 技（Redmine #59）
+	MOVE_CUT,	//128
+	MOVE_FLY,	//129
+	MOVE_SURF,	//130
+	MOVE_STRENGTH,	//131
+	MOVE_DIVE,	//132
+	MOVE_ROCKSMASH,	//133
+	MOVE_WATERFALL,	//134
+	MOVE_ROCKCLIMB,	//135
 };
 
 const u16 gMoveTutorMoves[NUM_MOVE_TUTOR_MOVES] =

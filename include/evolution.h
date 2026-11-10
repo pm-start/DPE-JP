@@ -58,6 +58,7 @@ enum EvolutionMethods
     EVO_MAUSHOLD_FOUR,
     EVO_DUDUNSPARCE_TWO,
     EVO_DUDUNSPARCE_THREE,
+	EVO_LEVEL_FRIENDSHIP, //[hack] 2026-11-08 Lv（param）以上のレベルアップ＋なつき 220 以上（バブチフ→オモチフワ・patches/0969）
 };
 
 #define EVO_TERASTAL 0xFC

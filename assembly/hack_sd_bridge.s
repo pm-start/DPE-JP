@@ -11,3 +11,9 @@ gHackSdBridge:
 .global gHackMonIdBridge
 gHackMonIdBridge:
 .word 0
+
+@ 0.63.1 Moémon の絵の世代（src/hack_moemon.c が聞く）: CFRU の HackMoemonGen_Of の番地。0 なら聞かず 世代 1（今の絵）
+.align 2
+.global gHackMoemonGenBridge
+gHackMoemonGenBridge:
+.word 0

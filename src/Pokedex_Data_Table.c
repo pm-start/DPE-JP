@@ -11442,6 +11442,130 @@ const struct PokedexEntry gPokedexEntries[NATIONAL_DEX_COUNT] =
 		.pokemonScale = 256, .pokemonOffset = 0, .trainerScale = 256, .trainerOffset = 0,
 	},
 /* GIGAMINE END */
+/* TSUKINOUROKO BEGIN (tools/custom_mon/tsukinouroko/build_tsukinouroko.py) */
+	[NATIONAL_DEX_TSUKINOUROKO] = {
+		.categoryName = {_ge, _nn, _wa, _ku, _SPACE, _SPACE},
+		.height = 75, .weight = 1900, .description = DEX_ENTRY_TSUKINOUROKO,
+		.pokemonScale = 256, .pokemonOffset = 0, .trainerScale = 256, .trainerOffset = 0,
+	},
+/* TSUKINOUROKO END */
+/* WATASHI_LEGENDS BEGIN (tools/custom_mon/watashitachi_legends/build_legends.py) */
+	[NATIONAL_DEX_TSUKIRIRU] = {
+		.categoryName = {0x12, 0x07, 0x26, 0x00, 0x00, 0x00},
+		.height = 12, .weight = 320, .description = DEX_ENTRY_TSUKIRIRU,
+		.pokemonScale = 256, .pokemonOffset = 0, .trainerScale = 256, .trainerOffset = 0,
+	},
+	[NATIONAL_DEX_UISHIRUSHI] = {
+		.categoryName = {0x07, 0x05, 0x08, 0x00, 0x00, 0x00},
+		.height = 16, .weight = 415, .description = DEX_ENTRY_UISHIRUSHI,
+		.pokemonScale = 256, .pokemonOffset = 0, .trainerScale = 256, .trainerOffset = 0,
+	},
+	[NATIONAL_DEX_SHIDAREAME] = {
+		.categoryName = {0x15, 0x20, 0x41, 0x00, 0x00, 0x00},
+		.height = 15, .weight = 284, .description = DEX_ENTRY_SHIDAREAME,
+		.pokemonScale = 256, .pokemonOffset = 0, .trainerScale = 256, .trainerOffset = 0,
+	},
+	[NATIONAL_DEX_MILKIHEART] = {
+		.categoryName = {0x17, 0x08, 0x23, 0x28, 0x00, 0x00},
+		.height = 10, .weight = 360, .description = DEX_ENTRY_MILKIHEART,
+		.pokemonScale = 256, .pokemonOffset = 0, .trainerScale = 256, .trainerOffset = 0,
+	},
+	[NATIONAL_DEX_NAOGANE] = {
+		.categoryName = {0x0C, 0x3D, 0x1F, 0x00, 0x00, 0x00},
+		.height = 17, .weight = 880, .description = DEX_ENTRY_NAOGANE,
+		.pokemonScale = 256, .pokemonOffset = 0, .trainerScale = 256, .trainerOffset = 0,
+	},
+	[NATIONAL_DEX_KAIRIPULSE] = {
+		.categoryName = {0x01, 0x0F, 0x47, 0x00, 0x00, 0x00},
+		.height = 9, .weight = 125, .description = DEX_ENTRY_KAIRIPULSE,
+		.pokemonScale = 256, .pokemonOffset = 0, .trainerScale = 256, .trainerOffset = 0,
+	},
+	[NATIONAL_DEX_RIKKAYUKI] = {
+		.categoryName = {0x25, 0x07, 0x46, 0x15, 0x00, 0x00},
+		.height = 14, .weight = 300, .description = DEX_ENTRY_RIKKAYUKI,
+		.pokemonScale = 256, .pokemonOffset = 0, .trainerScale = 256, .trainerOffset = 0,
+	},
+	[NATIONAL_DEX_SHIIBARA] = {
+		.categoryName = {0x01, 0x0A, 0x37, 0x2A, 0x00, 0x00},
+		.height = 13, .weight = 450, .description = DEX_ENTRY_SHIIBARA,
+		.pokemonScale = 256, .pokemonOffset = 0, .trainerScale = 256, .trainerOffset = 0,
+	},
+	[NATIONAL_DEX_RANKITSUNE] = {
+		.categoryName = {0x07, 0x12, 0x18, 0x47, 0x00, 0x00},
+		.height = 11, .weight = 220, .description = DEX_ENTRY_RANKITSUNE,
+		.pokemonScale = 256, .pokemonOffset = 0, .trainerScale = 256, .trainerOffset = 0,
+	},
+	[NATIONAL_DEX_ICHIGOBERRY] = {
+		.categoryName = {0x01, 0x1F, 0x02, 0x2B, 0x00, 0x00},
+		.height = 8, .weight = 180, .description = DEX_ENTRY_ICHIGOBERRY,
+		.pokemonScale = 256, .pokemonOffset = 0, .trainerScale = 256, .trainerOffset = 0,
+	},
+/* WATASHI_LEGENDS END */
+/* IWA_GACHI BEGIN (tools/custom_mon/iwaorochi_gachigoras/build_fakemon.py) */
+	[NATIONAL_DEX_IWAOROCHI] = {
+		.categoryName = {_ii, _wa, _he, _bi, _SPACE, _SPACE},
+		.height = 92, .weight = 2400, .description = DEX_ENTRY_IWAOROCHI,
+		.pokemonScale = 256, .pokemonOffset = 0, .trainerScale = 256, .trainerOffset = 0,
+	},
+/* IWA_GACHI END */
+/* ARAWANA BEGIN (tools/custom_mon/arawana/build_arawana.py・やん之助) */
+	[NATIONAL_DEX_ARAWANA_BLUE] = {
+		.categoryName = {_ki, _xyo, _uu, _bo, _uu, _SPACE},
+		.height = 30, .weight = 1200, .description = DEX_ENTRY_ARAWANA_BLUE,
+		.pokemonScale = 256, .pokemonOffset = 0, .trainerScale = 256, .trainerOffset = 0,
+	},
+	[NATIONAL_DEX_ARAWANA_RED] = {
+		.categoryName = {_ki, _xyo, _uu, _bo, _uu, _SPACE},
+		.height = 30, .weight = 1200, .description = DEX_ENTRY_ARAWANA_RED,
+		.pokemonScale = 256, .pokemonOffset = 0, .trainerScale = 256, .trainerOffset = 0,
+	},
+/* ARAWANA END */
+/* ORCAISER BEGIN (tools/custom_mon/orcaiser/build_orcaiser.py) */
+	[NATIONAL_DEX_KOSHAL] = {
+		.categoryName = {_ko, _da, _ii, _SI, _XYA, _TI},
+		.height = 18, .weight = 1420, .description = DEX_ENTRY_KOSHAL,
+		.pokemonScale = 256, .pokemonOffset = 0, .trainerScale = 256, .trainerOffset = 0,
+	},
+	[NATIONAL_DEX_ORCAISER] = {
+		.categoryName = {_ko, _ka, _ii, _ha, _oo, _uu},
+		.height = 74, .weight = 9999, .description = DEX_ENTRY_ORCAISER,
+		.pokemonScale = 256, .pokemonOffset = 0, .trainerScale = 256, .trainerOffset = 0,
+	},
+/* ORCAISER END */
+/* SILVA_MOCHI BEGIN (tools/custom_mon/silva_mochi/build_silva_mochi.py・Silva) */
+	[NATIONAL_DEX_BUBUCHIFU] = {
+		.categoryName = {_oo, _mo, _ti, _SPACE, _SPACE, _SPACE},
+		.height = 4, .weight = 85, .description = DEX_ENTRY_BUBUCHIFU,
+		.pokemonScale = 256, .pokemonOffset = 0, .trainerScale = 256, .trainerOffset = 0,
+	},
+	[NATIONAL_DEX_OMOCHIFUWA] = {
+		.categoryName = {_oo, _mo, _ti, _ii, _nu, _SPACE},
+		.height = 7, .weight = 195, .description = DEX_ENTRY_OMOCHIFUWA,
+		.pokemonScale = 256, .pokemonOffset = 0, .trainerScale = 256, .trainerOffset = 0,
+	},
+/* SILVA_MOCHI END */
+/* KASEKIMERA BEGIN (tools/custom_mon/kasekimera/build_kasekimera.py・やん之助) */
+	[NATIONAL_DEX_PACHINIKUSU] = {
+		.categoryName = {_ko, _da, _ii, _do, _ri, _SPACE},
+		.height = 11, .weight = 320, .description = DEX_ENTRY_PACHINIKUSU,
+		.pokemonScale = 256, .pokemonOffset = 0, .trainerScale = 256, .trainerOffset = 0,
+	},
+	[NATIONAL_DEX_DANKURUO] = {
+		.categoryName = {_ko, _da, _ii, _gi, _xyo, _SPACE},
+		.height = 21, .weight = 1900, .description = DEX_ENTRY_DANKURUO,
+		.pokemonScale = 256, .pokemonOffset = 0, .trainerScale = 256, .trainerOffset = 0,
+	},
+	[NATIONAL_DEX_SUTEGORADON] = {
+		.categoryName = {_ke, _nn, _ri, _xyu, _uu, _SPACE},
+		.height = 23, .weight = 2200, .description = DEX_ENTRY_SUTEGORADON,
+		.pokemonScale = 256, .pokemonOffset = 0, .trainerScale = 256, .trainerOffset = 0,
+	},
+	[NATIONAL_DEX_PURECHIRUDO] = {
+		.categoryName = {_ku, _bi, _na, _ga, _SPACE, _SPACE},
+		.height = 28, .weight = 1800, .description = DEX_ENTRY_PURECHIRUDO,
+		.pokemonScale = 256, .pokemonOffset = 0, .trainerScale = 256, .trainerOffset = 0,
+	},
+/* KASEKIMERA END */
 };
 
 //Certain Pokemon forms can have alternate dex entries when viewed
@@ -11553,5 +11677,6 @@ const struct AlternateDexEntries gAlternateDexEntries[] =
 	ALTERNATE_ENTRY(OGERPON_HEARTHFLAME_MASK),
 	ALTERNATE_ENTRY(OGERPON_CORNERSTONE_MASK),
 	ALTERNATE_ENTRY(TERAPAGOS_TERASTAL),
+	ALTERNATE_ENTRY(VANILLUXE_DEV),   // 2026-10-11 build_vanilluxe_dev.py
 	{SPECIES_TABLES_TERMIN, 0}, 
 };

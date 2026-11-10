@@ -1510,4 +1510,49 @@ const struct ItemAnimation gItemAnimationTable[NUM_SPECIES] =
 /* GIGAMINE BEGIN (tools/custom_mon/gigamine/build_gigamine.py・やん之助) */
 	[SPECIES_GIGAMINE] =            {0x21, 0x17, 0x30, 0x20, 0x24},
 /* GIGAMINE END */
+/* TSUKINOUROKO BEGIN (tools/custom_mon/tsukinouroko/build_tsukinouroko.py) */
+	[SPECIES_TSUKINOUROKO] =              {0x16, 0x19, 0x30, 0x13, 0x22},
+/* TSUKINOUROKO END */
+/* VANILLUXE_DEV BEGIN (tools/custom_mon/vanilluxe_dev/build_vanilluxe_dev.py) */
+	[SPECIES_VANILLUXE_DEV] =            {0x14, 0x1b, 0x30, 0x15, 0x2a},
+/* VANILLUXE_DEV END */
+/* WATASHI_LEGENDS BEGIN (tools/custom_mon/watashitachi_legends/build_legends.py) */
+	[SPECIES_TSUKIRIRU] = {0x0, 0x0, 0x0, 0x0, 0x0},
+	[SPECIES_UISHIRUSHI] = {0x0, 0x0, 0x0, 0x0, 0x0},
+	[SPECIES_SHIDAREAME] = {0x0, 0x0, 0x0, 0x0, 0x0},
+	[SPECIES_MILKIHEART] = {0x0, 0x0, 0x0, 0x0, 0x0},
+	[SPECIES_NAOGANE] = {0x0, 0x0, 0x0, 0x0, 0x0},
+	[SPECIES_KAIRIPULSE] = {0x0, 0x0, 0x0, 0x0, 0x0},
+	[SPECIES_RIKKAYUKI] = {0x0, 0x0, 0x0, 0x0, 0x0},
+	[SPECIES_SHIIBARA] = {0x0, 0x0, 0x0, 0x0, 0x0},
+	[SPECIES_RANKITSUNE] = {0x0, 0x0, 0x0, 0x0, 0x0},
+	[SPECIES_ICHIGOBERRY] = {0x0, 0x0, 0x0, 0x0, 0x0},
+/* WATASHI_LEGENDS END */
+/* DEBUG_MON BEGIN (tools/custom_mon/debug_mon/build_debug_mon.py) */
+	[SPECIES_DEBUGMON_MAX] =               {0x14, 0x1b, 0x30, 0x15, 0x2a},
+	[SPECIES_DEBUGMON_MIN] =               {0x14, 0x1b, 0x30, 0x15, 0x2a},
+/* DEBUG_MON END */
+/* IWA_GACHI BEGIN (tools/custom_mon/iwaorochi_gachigoras/build_fakemon.py) */
+	[SPECIES_IWAOROCHI] =              {0x1b, 0x15, 0x30, 0x1a, 0x23},
+	[SPECIES_GENSHIGACHIGORAS] =            {0x16, 0x1b, 0x30, 0x16, 0x29},
+/* IWA_GACHI END */
+/* ARAWANA BEGIN (tools/custom_mon/arawana/build_arawana.py・やん之助) */
+	[SPECIES_ARAWANA_BLUE] =        {0x14, 0x1b, 0x30, 0x15, 0x2a},
+	[SPECIES_ARAWANA_RED] =         {0x14, 0x1b, 0x30, 0x15, 0x2a},
+/* ARAWANA END */
+/* ORCAISER BEGIN (tools/custom_mon/orcaiser/build_orcaiser.py) */
+	[SPECIES_KOSHAL] =              {0x17, 0x3, 0x30, 0x9, 0x13},
+	[SPECIES_ORCAISER] =              {0x24, 0x1a, 0x30, 0x22, 0x2a},
+	[SPECIES_GENSHIORCAISER] =              {0x24, 0x1a, 0x30, 0x22, 0x2a},
+/* ORCAISER END */
+/* SILVA_MOCHI BEGIN (tools/custom_mon/silva_mochi/build_silva_mochi.py・Silva) */
+	[SPECIES_BUBUCHIFU] =             {0x1c, 0x9, 0x30, 0x19, 0x18},
+	[SPECIES_OMOCHIFUWA] =             {0x1f, 0x26, 0x20, 0x1d, 0x33},
+/* SILVA_MOCHI END */
+/* KASEKIMERA BEGIN (tools/custom_mon/kasekimera/build_kasekimera.py・やん之助) */
+	[SPECIES_PACHINIKUSU] =             {0x14, 0x1b, 0x30, 0x15, 0x2a},
+	[SPECIES_DANKURUO] =            {0x0, 0x0, 0x0, 0x0, 0x0},
+	[SPECIES_SUTEGORADON] =            {0x14, 0x1b, 0x30, 0x15, 0x2a},
+	[SPECIES_PURECHIRUDO] =            {0x0, 0x0, 0x0, 0x0, 0x0},
+/* KASEKIMERA END */
 };

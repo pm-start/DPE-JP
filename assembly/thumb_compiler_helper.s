@@ -75,7 +75,7 @@ __gnu_thumb1_case_shi:
 	.syntax unified
     .global __gnu_thumb1_case_si
     .thumb_func
-    .type __gnu_thumb1_case_shi,function
+    .type __gnu_thumb1_case_si,function
 __gnu_thumb1_case_si:
         push    {r0, r1}
         mov     r1, lr
@@ -119,13 +119,15 @@ __aeabi_idivmod:
 	@ [hack] 2026-10-11 patches/0328: ABI どおり r0 = 商・r1 = 余り を返す。前は __modsi3 の余りを r0 と r1 の両方に返していて、
 	@   GCC が同じ a / b と a % b を 1 回の __aeabi_idivmod にまとめた C（r0 を商として読む）で、商が余りになっていた
 	@   （タイトルの 14 コマの step = t / 12 など・CLAUDE.md 6.83）。__divsi3（素の ROM）は r4 を push/pop するので r4・r5 は壊れない
-	push {r4, r5, lr}
+	@ [hack] 2026-10-12 patches/0339: 上流 pm-start/DPE-JP c215e053（liru さん）の形に（push {r4, r5, r6, lr} で 8 バイト境界・r1 = r0 - 商×除数）
+	push {r4, r5, r6, lr} @ Keep the stack 8-byte aligned
 	movs r4, r0
 	movs r5, r1
 	bl ActualDivisionInt
-	muls r5, r0, r5
-	subs r1, r4, r5
-	pop {r4, r5, pc}
+	movs r1, r5
+	muls r1, r0
+	subs r1, r4, r1 @ r0 = quotient, r1 = remainder
+	pop {r4, r5, r6, pc}
 
 ActualDivisionInt:
 	ldr r3, =(__divsi3)
@@ -139,13 +141,15 @@ ActualDivisionInt:
     .type __aeabi_uidivmod,function
 __aeabi_uidivmod:
 	@ [hack] 2026-10-11 patches/0328: ABI どおり r0 = 商・r1 = 余り（上の __aeabi_idivmod と同じ理由）
-	push {r4, r5, lr}
+	@ [hack] 2026-10-12 patches/0339: 上流 pm-start/DPE-JP c215e053（liru さん）の形に（push {r4, r5, r6, lr} で 8 バイト境界・r1 = r0 - 商×除数）
+	push {r4, r5, r6, lr} @ Keep the stack 8-byte aligned
 	movs r4, r0
 	movs r5, r1
 	bl ActualDivisionUInt
-	muls r5, r0, r5
-	subs r1, r4, r5
-	pop {r4, r5, pc}
+	movs r1, r5
+	muls r1, r0
+	subs r1, r4, r1 @ r0 = quotient, r1 = remainder
+	pop {r4, r5, r6, pc}
 
 ActualDivisionUInt:
 	ldr r3, =(__udivsi3)

@@ -103,6 +103,7 @@ void __attribute__((long_call)) PutWindowTilemap(u8 windowId);
 
 //This file's functions
 u16 TryGetFemaleGenderedSpecies(u16 species, u32 personality);
+#define HACK_DEX_MALE_FLAG (*(volatile u8*) 0x0203EFA0) //[hack] patches/0945 図鑑の絵を作る間だけ 1（CFRU の src/hack_dex_male.h と同じ番地）。1 のあいだは性別差分（♀の絵）に差し替えない
 static u16 LoadNationalPokedexView(void);
 
 u16 SpeciesToCryId(u16 species)
@@ -130,7 +131,7 @@ u16 NationalPokedexNumToSpecies(u16 nationalNum)
 {
 	u16 species, i;
 
-	if (nationalNum == 0)
+	if (nationalNum == 0 || nationalNum > FINAL_DEX_ENTRY)
 		return 0;
 
 	species = 0;
@@ -142,9 +143,9 @@ u16 NationalPokedexNumToSpecies(u16 nationalNum)
 		{
 			if (nationalNum > sPivotalDexSpecies[i].dexNum)
 			{
-				u16 difference = nationalNum - sPivotalDexSpecies[i].dexNum;
-				if (gSpeciesToNationalPokedexNum[sPivotalDexSpecies[i].species + difference - 1] == nationalNum)
-					return sPivotalDexSpecies[i].species + difference;
+				u32 candidate = sPivotalDexSpecies[i].species + (u32) nationalNum - sPivotalDexSpecies[i].dexNum;
+				if (candidate < NUM_SPECIES && gSpeciesToNationalPokedexNum[candidate - 1] == nationalNum)
+					return candidate;
 				break;
 			}
 		}
@@ -177,6 +178,7 @@ bool8 HackMoemon_LoadPic(void *dest, u16 species, u32 personality, bool8 isFront
 const u32 *HackMoemon_GetPal(u16 species, u32 personality, bool8 shiny);
 const void *HackMoemon_GetPalStruct(u16 species, u32 personality, bool8 shiny);
 u16 HackMoemon_IconSpecies(u16 species, u32 personality);
+bool8 HackMoemon_Shows(u16 species, u32 personality); //[hack] patches/0944 Moémon の姿で出る個体か（選び方は変えない・HackMoemon_Slot を見るだけ）
 #endif
 
 void LoadSpecialPokePic(const struct CompressedSpriteSheet* src, void* dest, u16 species, u32 personality, bool8 isFrontPic)
@@ -210,7 +212,7 @@ void LoadSpecialPokePic(const struct CompressedSpriteSheet* src, void* dest, u16
 		else
 			LZ77UnCompWram((void*) gMonFrontPicTable[i].data, dest);
 	}
-	else if (species > NUM_SPECIES) // is species unknown? draw the ? icon
+	else if (oldSpecies >= NUM_SPECIES) // is species unknown? draw the ? icon
 		LZ77UnCompWram((void*) gMonFrontPicTable[0].data, dest);
 	else
 		LZ77UnCompWram((void*) src->data, dest);
@@ -235,7 +237,7 @@ const u32* GetFrontSpritePalFromSpeciesAndPersonality(u16 species, u32 otId, u32
 	
 	species = TryGetFemaleGenderedSpecies(species, personality);
 	
-	if (species > NUM_SPECIES)
+	if (species >= NUM_SPECIES)
 		return (u32*) gMonPaletteTable[0].data;
 
 	shinyValue = HackDpe_IsShiny(otId, personality);
@@ -265,10 +267,33 @@ const struct CompressedSpritePalette* GetMonSpritePalStructFromOtIdPersonality(u
 		return &gMonPaletteTable[species];
 }
 
+#define HACK_SPECIES_PIKACHU_F 252 //旧 ? の空き番号（0xFC）を♀ピカチュウの絵の置き場に使う（表の 252 番を差し替え・NUM_SPECIES・既存の種族番号は動かさない）
+
 u16 TryGetFemaleGenderedSpecies(u16 species, u32 personality)
 {
+	if (species >= NUM_SPECIES)
+		return SPECIES_NONE;
+
 	if (GetGenderFromSpeciesAndPersonality(species, personality) == MON_FEMALE)
 	{
+		if (HACK_DEX_MALE_FLAG) //[hack] patches/0945 図鑑の絵は性格値 0 が ♀ と判定されるので ♂（ふつう）の絵のまま
+			return species;
+		#ifndef HACK_NO_MOEMON
+		//[hack] patches/0971（Redmine #266）Moémon の姿で出る個体は♀の別種族（_F／_FEMALE）に差し替えない。
+		//  戦闘の入口フック（BattleLoad…MonSpriteGfxHook）がここを先に通り、_F の番号で LoadSpecialPokePic に入ると Moémon の表（_F は絵なし）が引けず、
+		//  ふつうの♀の絵に Moémon の色だけが乗る（ピカチュウ♀は下の case で同じ判定済み）
+		switch (species) {
+			case SPECIES_HIPPOPOTAS:
+			case SPECIES_HIPPOWDON:
+			case SPECIES_UNFEZANT:
+			case SPECIES_FRILLISH:
+			case SPECIES_JELLICENT:
+			case SPECIES_PYROAR:
+				if (HackMoemon_Shows(species, personality))
+					return species;
+				break;
+		}
+		#endif
 		switch (species) {
 			case SPECIES_HIPPOPOTAS:
 				species = SPECIES_HIPPOPOTAS_F;
@@ -287,6 +312,13 @@ u16 TryGetFemaleGenderedSpecies(u16 species, u32 personality)
 				break;
 			case SPECIES_PYROAR:
 				species = SPECIES_PYROAR_FEMALE;
+				break;
+			case SPECIES_PIKACHU: //[hack] patches/0944 ♀ピカチュウ（しっぽがハート）。表示のときだけ差し替え＝セーブは変わらない
+				#ifndef HACK_NO_MOEMON
+				if (HackMoemon_Shows(species, personality))
+					break; //Moémon の姿で出る個体は今のまま（戦闘の読み込みの入口 BattleLoad…Hook はここを先に通るので、ここで外さないと Moémon の絵に届かない）
+				#endif
+				species = HACK_SPECIES_PIKACHU_F;
 				break;
 		}
 	}
@@ -319,7 +351,7 @@ u16 GetIconSpecies(u16 species, u32 personality)
 	}
 	else
 	{
-		if (species > NUM_SPECIES)
+		if (species >= NUM_SPECIES)
 			result = 0;
 		else
 			result = TryGetFemaleGenderedSpecies(species, personality);
@@ -359,13 +391,17 @@ u16 CountSpeciesInDex(u8 caseId, bool8 whichDex)
 	return count;
 }
 
+bool16 HasAllMons(void); //[hack] patches/0480 下で定義
+
 u16 GetRegionalPokedexCount(u8 caseId)
 {
 	u16 i, count;
 
-	for (i = 0, count = 0; i < gRegionalDexCount; ++i)
+	//[hack] patches/0480 素の GetKantoPokedexCount（08088AB8）の呼び元（ずかんの数の表示・セーブの画面・ヘルプ・トレーナーカード）は全国図鑑の数にする
+	//  （地方図鑑の一覧は CountSpeciesInDex などの別の関数・この関数は 08088AB8 の差し替え以外から呼ばれない）
+	for (i = 1, count = 0; i <= FINAL_DEX_ENTRY; ++i)
 	{
-		if (GetSetPokedexFlag(SpeciesToNationalPokedexNum(gPokedexOrder_Regional[i]), caseId))
+		if (GetSetPokedexFlag(i, caseId))
 			count++;
 	}
 
@@ -374,15 +410,8 @@ u16 GetRegionalPokedexCount(u8 caseId)
 
 bool16 HasAllRegionalMons(void)
 {
-	u16 i;
-
-	for (i = 0; i < gRegionalDexCount; ++i)
-	{
-		if (!GetSetPokedexFlag(SpeciesToNationalPokedexNum(gPokedexOrder_Regional[i]), FLAG_GET_CAUGHT))
-			return FALSE;
-	}
-
-	return TRUE;
+	//[hack] patches/0480 素の HasAllKantoMons（08088B34）の呼び元（タマムシのゲームデザイナーの賞状・トレーナーカード）は全国図鑑を全部そろえたか
+	return HasAllMons();
 }
 
 bool16 sp1B9_SeenAllRegionalMons(void)
@@ -536,7 +565,7 @@ static u16 LoadNationalPokedexView(void)
 		}
 	}
 
-	return lastMeaningfulIndex;
+	return lastMeaningfulIndex ? lastMeaningfulIndex : 1;
 }
 
 void DexScreen_PrintNum3LeadingZeroes(u8 windowId, u8 fontId, u16 num, u8 x, u8 y, u8 colorIdx)

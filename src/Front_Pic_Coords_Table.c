@@ -3966,7 +3966,7 @@ const struct MonCoords gMonFrontPicCoords[NUM_SPECIES] =
 	[SPECIES_SWIRLIX] =
 	{
 		.size = 0x0,
-		.y_offset = 0xe,
+		.y_offset = 0xf,
 	},
 	[SPECIES_SLURPUFF] =
 	{
@@ -4596,7 +4596,7 @@ const struct MonCoords gMonFrontPicCoords[NUM_SPECIES] =
 	[SPECIES_DIANCIE_MEGA] =
 	{
 		.size = 0x0,
-		.y_offset = 0x1,
+		.y_offset = 0x0,
 	},
 	[SPECIES_DIALGA_ORIGIN] =
 	{
@@ -6211,7 +6211,7 @@ const struct MonCoords gMonFrontPicCoords[NUM_SPECIES] =
 	[SPECIES_SAMUROTT_H] =
 	{
 		.size = 0x0,
-		.y_offset = 0x3,
+		.y_offset = 0x0,
 	},
 	[SPECIES_LILLIGANT_H] =
 	{
@@ -6246,7 +6246,7 @@ const struct MonCoords gMonFrontPicCoords[NUM_SPECIES] =
 	[SPECIES_GOODRA_H] =
 	{
 		.size = 0x0,
-		.y_offset = 0x2,
+		.y_offset = 0x1,
 	},
 	[SPECIES_AVALUGG_H] =
 	{
@@ -6356,7 +6356,7 @@ const struct MonCoords gMonFrontPicCoords[NUM_SPECIES] =
 	[SPECIES_OINKOLOGNE] =
 	{
 		.size = 0x0,
-		.y_offset = 0x5,
+		.y_offset = 0x6,
 	},
 	[SPECIES_OINKOLOGNE_FEMALE] =
 	{
@@ -6466,17 +6466,17 @@ const struct MonCoords gMonFrontPicCoords[NUM_SPECIES] =
 	[SPECIES_NACLSTACK] =
 	{
 		.size = 0x0,
-		.y_offset = 0x7,
+		.y_offset = 0xd,
 	},
 	[SPECIES_GARGANACL] =
 	{
 		.size = 0x0,
-		.y_offset = 0x0,
+		.y_offset = 0x5,
 	},
 	[SPECIES_CHARCADET] =
 	{
 		.size = 0x0,
-		.y_offset = 0x6,
+		.y_offset = 0x9,
 	},
 	[SPECIES_ARMAROUGE] =
 	{
@@ -6511,7 +6511,7 @@ const struct MonCoords gMonFrontPicCoords[NUM_SPECIES] =
 	[SPECIES_MASCHIFF] =
 	{
 		.size = 0x0,
-		.y_offset = 0xb,
+		.y_offset = 0xf,
 	},
 	[SPECIES_MABOSSTIFF] =
 	{
@@ -6586,7 +6586,7 @@ const struct MonCoords gMonFrontPicCoords[NUM_SPECIES] =
 	[SPECIES_TINKATINK] =
 	{
 		.size = 0x0,
-		.y_offset = 0xc,
+		.y_offset = 0xd,
 	},
 	[SPECIES_TINKATUFF] =
 	{
@@ -6616,7 +6616,7 @@ const struct MonCoords gMonFrontPicCoords[NUM_SPECIES] =
 	[SPECIES_FINIZEN] =
 	{
 		.size = 0x0,
-		.y_offset = 0xf,
+		.y_offset = 0x7,
 	},
 	[SPECIES_PALAFIN] =
 	{
@@ -6771,7 +6771,7 @@ const struct MonCoords gMonFrontPicCoords[NUM_SPECIES] =
 	[SPECIES_GREAT_TUSK] =
 	{
 		.size = 0x0,
-		.y_offset = 0x5,
+		.y_offset = 0x0,
 	},
 	[SPECIES_SCREAM_TAIL] =
 	{
@@ -6806,12 +6806,12 @@ const struct MonCoords gMonFrontPicCoords[NUM_SPECIES] =
 	[SPECIES_IRON_TREADS] =
 	{
 		.size = 0x0,
-		.y_offset = 0x5,
+		.y_offset = 0x9,
 	},
 	[SPECIES_IRON_BUNDLE] =
 	{
 		.size = 0x0,
-		.y_offset = 0x4,
+		.y_offset = 0x8,
 	},
 	[SPECIES_IRON_HANDS] =
 	{
@@ -6821,7 +6821,7 @@ const struct MonCoords gMonFrontPicCoords[NUM_SPECIES] =
 	[SPECIES_IRON_JUGULIS] =
 	{
 		.size = 0x0,
-		.y_offset = 0x2,
+		.y_offset = 0x3,
 	},
 	[SPECIES_IRON_MOTH] =
 	{
@@ -6866,7 +6866,7 @@ const struct MonCoords gMonFrontPicCoords[NUM_SPECIES] =
 	[SPECIES_CHI_YU] =
 	{
 		.size = 0x0,
-		.y_offset = 0xa,
+		.y_offset = 0xb,
 	},
 	[SPECIES_KORAIDON] =
 	{
@@ -6921,12 +6921,12 @@ const struct MonCoords gMonFrontPicCoords[NUM_SPECIES] =
 	[SPECIES_SINISTCHA] =
 	{
 		.size = 0x0,
-		.y_offset = 0x7,
+		.y_offset = 0x4,
 	},
 	[SPECIES_SINISTCHA_MASTERPIECE] =
 	{
 		.size = 0x0,
-		.y_offset = 0x7,
+		.y_offset = 0x4,
 	},
 	[SPECIES_OKIDOGI] =
 	{
@@ -7459,5 +7459,58 @@ const struct MonCoords gMonFrontPicCoords[NUM_SPECIES] =
 /* GIGAMINE BEGIN (tools/custom_mon/gigamine/build_gigamine.py・やん之助) */
 	[SPECIES_GIGAMINE] = {.size = 0x88, .y_offset = 1},
 /* GIGAMINE END */
+/* TSUKINOUROKO BEGIN (tools/custom_mon/tsukinouroko/build_tsukinouroko.py) */
+	[SPECIES_TSUKINOUROKO] = {.size = 0x88, .y_offset = 2},
+/* TSUKINOUROKO END */
+/* VANILLUXE_DEV BEGIN (tools/custom_mon/vanilluxe_dev/build_vanilluxe_dev.py) */
+	[SPECIES_VANILLUXE_DEV] = {.size = 0x88, .y_offset = 1},
+/* VANILLUXE_DEV END */
+/* WATASHI_LEGENDS BEGIN (tools/custom_mon/watashitachi_legends/build_legends.py) */
+	[SPECIES_TSUKIRIRU] = {.size = 0x88, .y_offset = 2},
+	[SPECIES_UISHIRUSHI] = {.size = 0x88, .y_offset = 2},
+	[SPECIES_SHIDAREAME] = {.size = 0x88, .y_offset = 2},
+	[SPECIES_MILKIHEART] = {.size = 0x88, .y_offset = 2},
+	[SPECIES_NAOGANE] = {.size = 0x88, .y_offset = 2},
+	[SPECIES_KAIRIPULSE] = {.size = 0x88, .y_offset = 2},
+	[SPECIES_RIKKAYUKI] = {.size = 0x88, .y_offset = 2},
+	[SPECIES_SHIIBARA] = {.size = 0x88, .y_offset = 2},
+	[SPECIES_RANKITSUNE] = {.size = 0x88, .y_offset = 2},
+	[SPECIES_ICHIGOBERRY] = {.size = 0x88, .y_offset = 2},
+/* WATASHI_LEGENDS END */
+/* DEBUG_MON BEGIN (tools/custom_mon/debug_mon/build_debug_mon.py) */
+	[SPECIES_DEBUGMON_MAX] =
+	{
+		.size = 0x0,
+		.y_offset = 0x4,
+	},
+	[SPECIES_DEBUGMON_MIN] =
+	{
+		.size = 0x0,
+		.y_offset = 0x4,
+	},
+/* DEBUG_MON END */
+/* IWA_GACHI BEGIN (tools/custom_mon/iwaorochi_gachigoras/build_fakemon.py) */
+	[SPECIES_IWAOROCHI] = {.size = 0x88, .y_offset = 0},
+	[SPECIES_GENSHIGACHIGORAS] = {.size = 0x88, .y_offset = 0},
+/* IWA_GACHI END */
+/* ARAWANA BEGIN (tools/custom_mon/arawana/build_arawana.py・やん之助) */
+	[SPECIES_ARAWANA_BLUE] = {.size = 0x88, .y_offset = 1},
+	[SPECIES_ARAWANA_RED] = {.size = 0x88, .y_offset = 0},
+/* ARAWANA END */
+/* ORCAISER BEGIN (tools/custom_mon/orcaiser/build_orcaiser.py) */
+	[SPECIES_KOSHAL] = {.size = 0x88, .y_offset = 5},
+	[SPECIES_ORCAISER] = {.size = 0x88, .y_offset = 5},
+	[SPECIES_GENSHIORCAISER] = {.size = 0x88, .y_offset = 5},
+/* ORCAISER END */
+/* SILVA_MOCHI BEGIN (tools/custom_mon/silva_mochi/build_silva_mochi.py・Silva) */
+	[SPECIES_BUBUCHIFU] = {.size = 0x88, .y_offset = 3},
+	[SPECIES_OMOCHIFUWA] = {.size = 0x88, .y_offset = 3},
+/* SILVA_MOCHI END */
+/* KASEKIMERA BEGIN (tools/custom_mon/kasekimera/build_kasekimera.py・やん之助) */
+	[SPECIES_PACHINIKUSU] = {.size = 0x88, .y_offset = 3},
+	[SPECIES_DANKURUO] = {.size = 0x88, .y_offset = 1},
+	[SPECIES_SUTEGORADON] = {.size = 0x88, .y_offset = 0},
+	[SPECIES_PURECHIRUDO] = {.size = 0x88, .y_offset = 0},
+/* KASEKIMERA END */
 };
 

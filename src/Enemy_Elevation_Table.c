@@ -1502,4 +1502,49 @@ const u8 gEnemyMonElevation[NUM_SPECIES] =
 /* GIGAMINE BEGIN (tools/custom_mon/gigamine/build_gigamine.py・やん之助) */
 	[SPECIES_GIGAMINE] = 0x0,
 /* GIGAMINE END */
+/* TSUKINOUROKO BEGIN (tools/custom_mon/tsukinouroko/build_tsukinouroko.py) */
+	[SPECIES_TSUKINOUROKO] = 0x0,
+/* TSUKINOUROKO END */
+/* VANILLUXE_DEV BEGIN (tools/custom_mon/vanilluxe_dev/build_vanilluxe_dev.py) */
+	[SPECIES_VANILLUXE_DEV] = 0x0,
+/* VANILLUXE_DEV END */
+/* WATASHI_LEGENDS BEGIN (tools/custom_mon/watashitachi_legends/build_legends.py) */
+	[SPECIES_TSUKIRIRU] = 0x0,
+	[SPECIES_UISHIRUSHI] = 0x0,
+	[SPECIES_SHIDAREAME] = 0x0,
+	[SPECIES_MILKIHEART] = 0x0,
+	[SPECIES_NAOGANE] = 0x0,
+	[SPECIES_KAIRIPULSE] = 0x0,
+	[SPECIES_RIKKAYUKI] = 0x0,
+	[SPECIES_SHIIBARA] = 0x0,
+	[SPECIES_RANKITSUNE] = 0x0,
+	[SPECIES_ICHIGOBERRY] = 0x0,
+/* WATASHI_LEGENDS END */
+/* DEBUG_MON BEGIN (tools/custom_mon/debug_mon/build_debug_mon.py) */
+	[SPECIES_DEBUGMON_MAX] = 0x0,
+	[SPECIES_DEBUGMON_MIN] = 0x0,
+/* DEBUG_MON END */
+/* IWA_GACHI BEGIN (tools/custom_mon/iwaorochi_gachigoras/build_fakemon.py) */
+	[SPECIES_IWAOROCHI] = 0x0,
+	[SPECIES_GENSHIGACHIGORAS] = 0x0,
+/* IWA_GACHI END */
+/* ARAWANA BEGIN (tools/custom_mon/arawana/build_arawana.py・やん之助) */
+	[SPECIES_ARAWANA_BLUE] = 0x0,
+	[SPECIES_ARAWANA_RED] = 0x0,
+/* ARAWANA END */
+/* ORCAISER BEGIN (tools/custom_mon/orcaiser/build_orcaiser.py) */
+	[SPECIES_KOSHAL] = 0x0,
+	[SPECIES_ORCAISER] = 0x0,
+	[SPECIES_GENSHIORCAISER] = 0x0,
+/* ORCAISER END */
+/* SILVA_MOCHI BEGIN (tools/custom_mon/silva_mochi/build_silva_mochi.py・Silva) */
+	[SPECIES_BUBUCHIFU] = 0x0,
+	[SPECIES_OMOCHIFUWA] = 0x0,
+/* SILVA_MOCHI END */
+/* KASEKIMERA BEGIN (tools/custom_mon/kasekimera/build_kasekimera.py・やん之助) */
+	[SPECIES_PACHINIKUSU] = 0x8,
+	[SPECIES_DANKURUO] = 0x0,
+	[SPECIES_SUTEGORADON] = 0x0,
+	[SPECIES_PURECHIRUDO] = 0x5,
+/* KASEKIMERA END */
 };

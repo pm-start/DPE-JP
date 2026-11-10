@@ -255,7 +255,7 @@ const u8* const gMonIconTable[NUM_SPECIES] =
 	[SPECIES_LUGIA] =                gIconSprite249LugiaTiles,
 	[SPECIES_HO_OH] =                gIconSprite250HoOhTiles,
 	[SPECIES_CELEBI] =               gIconSprite251CelebiTiles,
-	[252] =                          gIconSprite000NoneTiles,
+	[252] =                          gIconSprite025PikachuFTiles, //[hack] patches/0944 ♀ピカチュウの絵の置き場（旧 ? の空き番号 252＝HACK_SPECIES_PIKACHU_F・新しい種族番号は足さない・src/updated_code.c の TryGetFemaleGenderedSpecies）
 	[253] =                          gIconSprite000NoneTiles,
 	[254] =                          gIconSprite000NoneTiles,
 	[255] =                          gIconSprite000NoneTiles,
@@ -1503,4 +1503,49 @@ const u8* const gMonIconTable[NUM_SPECIES] =
 /* GIGAMINE BEGIN (tools/custom_mon/gigamine/build_gigamine.py・やん之助) */
 	[SPECIES_GIGAMINE] = gIconSpriteGigamineTiles,
 /* GIGAMINE END */
+/* TSUKINOUROKO BEGIN (tools/custom_mon/tsukinouroko/build_tsukinouroko.py) */
+	[SPECIES_TSUKINOUROKO] = gIconSprite329MiloticTiles,
+/* TSUKINOUROKO END */
+/* VANILLUXE_DEV BEGIN (tools/custom_mon/vanilluxe_dev/build_vanilluxe_dev.py) */
+	[SPECIES_VANILLUXE_DEV] = gIconSpriteVanilluxeDevTiles,
+/* VANILLUXE_DEV END */
+/* WATASHI_LEGENDS BEGIN (tools/custom_mon/watashitachi_legends/build_legends.py) */
+	[SPECIES_TSUKIRIRU] = gIconSpriteTsukiriruTiles,
+	[SPECIES_UISHIRUSHI] = gIconSpriteUishirushiTiles,
+	[SPECIES_SHIDAREAME] = gIconSpriteShidareameTiles,
+	[SPECIES_MILKIHEART] = gIconSpriteMilkiheartTiles,
+	[SPECIES_NAOGANE] = gIconSpriteNaoganeTiles,
+	[SPECIES_KAIRIPULSE] = gIconSpriteKairipulseTiles,
+	[SPECIES_RIKKAYUKI] = gIconSpriteRikkayukiTiles,
+	[SPECIES_SHIIBARA] = gIconSpriteShiibaraTiles,
+	[SPECIES_RANKITSUNE] = gIconSpriteRankitsuneTiles,
+	[SPECIES_ICHIGOBERRY] = gIconSpriteIchigoberryTiles,
+/* WATASHI_LEGENDS END */
+/* DEBUG_MON BEGIN (tools/custom_mon/debug_mon/build_debug_mon.py) */
+	[SPECIES_DEBUGMON_MAX] =               gIconSprite458LuxrayTiles,
+	[SPECIES_DEBUGMON_MIN] =               gIconSprite458LuxrayTiles,
+/* DEBUG_MON END */
+/* IWA_GACHI BEGIN (tools/custom_mon/iwaorochi_gachigoras/build_fakemon.py) */
+	[SPECIES_IWAOROCHI] = gIconSpriteIwaorochiTiles,
+	[SPECIES_GENSHIGACHIGORAS] = gIconSpriteGenshigachigorasTiles,
+/* IWA_GACHI END */
+/* ARAWANA BEGIN (tools/custom_mon/arawana/build_arawana.py・やん之助) */
+	[SPECIES_ARAWANA_BLUE] = gIconSpriteArawanaBlueTiles,
+	[SPECIES_ARAWANA_RED] = gIconSpriteArawanaRedTiles,
+/* ARAWANA END */
+/* ORCAISER BEGIN (tools/custom_mon/orcaiser/build_orcaiser.py) */
+	[SPECIES_KOSHAL] = gIconSpriteKoshalTiles,
+	[SPECIES_ORCAISER] = gIconSpriteOrcaiserTiles,
+	[SPECIES_GENSHIORCAISER] = gIconSpriteGenshiOrcaiserTiles,
+/* ORCAISER END */
+/* SILVA_MOCHI BEGIN (tools/custom_mon/silva_mochi/build_silva_mochi.py・Silva) */
+	[SPECIES_BUBUCHIFU] = gIconSpriteBubuchifuTiles,
+	[SPECIES_OMOCHIFUWA] = gIconSpriteOmochifuwaTiles,
+/* SILVA_MOCHI END */
+/* KASEKIMERA BEGIN (tools/custom_mon/kasekimera/build_kasekimera.py・やん之助) */
+	[SPECIES_PACHINIKUSU] = gIconSpritePachinikusuTiles,
+	[SPECIES_DANKURUO] = gIconSpriteDankuruoTiles,
+	[SPECIES_SUTEGORADON] = gIconSpriteSutegoradonTiles,
+	[SPECIES_PURECHIRUDO] = gIconSpritePurechirudoTiles,
+/* KASEKIMERA END */
 };

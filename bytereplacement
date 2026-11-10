@@ -47,13 +47,37 @@
 08054280 20 1C
 08054282 7D 30
 08054286 7D 22
-#Seen Flags @0x202583C
-08054294 9C 57 02 02
-081058CC 9C 57 02 02
-08105950 9C 57 02 02
-#Caught Flags @0x20258B9
-08105918 32 58 02 02
-08105974 32 58 02 02
+## RAMSHIFT BEGIN（tools/rom/build_ramshift.py が生成・手で直さない・SaveBlock2/1・PokemonStorage の位置は版ごと・patches/0622）
+#SetSaveBlocksPointers のプール（SB2・SB1・PokemonStorage）
+0804B84C FC 44 02 02
+0804B850 CC 54 02 02
+0804B858 6C 92 02 02
+#起動時の gSaveBlock2Ptr / gSaveBlock1Ptr の初期化のプール
+08000500 FC 44 02 02
+08000508 CC 54 02 02
+#ずかんの旗（SB1 + 0x310 見た・+ 0x3A6 捕まえた）
+08054294 DC 57 02 02
+081058CC DC 57 02 02
+08105950 DC 57 02 02
+08105918 72 58 02 02
+08105974 72 58 02 02
+#SetSaveBlocksPointers の乱数: 素の movs r1,#0x7C ; ands r1,r0 を戻す（CFRU は 00 21 00 21 で 0 固定にしていた）。r1 は SB2 だけに足す
+0804B81A 7C 21 01 40
+#SB1 は乱数を足さない（adds r0,r1,r0 を nop）。図鑑の旗のプールと Streaks が固定の番地で SB1 の中を指すため（docs/research/2026-10-20_anticheat-stage2.md）
+0804B828 C0 46
+#PokemonStorage も足さない（adds r1,r1,r0 を adds r1,r0,#0）。箱の表（ROM の定数）が固定の番地で指すため
+0804B830 01 1C
+#ClearSav2 が埋める範囲: SB2 が動きうる全範囲（下駄 + 乱数 0x7C + 大きさ 0xF24）
+0804B7E8 DA 07 00 01
+#暗号化の鍵を戻す: 素の adds r4,r4,r0（CFRU は movs r4,#0 で鍵 0 固定にしていた）。お金・ゲームの記録・きのみ粉・トレーナータワーが鍵で XOR される
+0804B8F6 24 18
+#素のバッグの鍵の付け替え ApplyNewEncryptionKeyToBagItems（080997E8・呼び元は 0804BCEE の SavePlayerBag と 08099840 の包み）は何もしない（bx lr）。
+#  素の gBagPockets（0x020397D8）は CFRU のバッグ（拡張の保存領域）と同じ番地で、鍵で XOR すると CFRU が平文で読む数がこわれる（GetBagItemQuantity 080997A8 も CFRU が平文に差し替え済み）
+080997E8 70 47
+#素の SetBagItemQuantity（080997C4・素の AddBagItem／RemoveBagItem から 6 か所）も平文に（GetBagItemQuantity は CFRU の special_inserts が 080997A8 で平文にしている）。
+#  strh r1,[r0] ; bx lr（先頭の lsls/lsrs 16 はそのまま）。鍵が 0 でない間、書くのが XOR で読むのが平文だとバッグの数がこわれる
+080997C8 01 80 70 47
+## RAMSHIFT END
 
 ##Fix Pokedex Species Issue
 8106650 FF

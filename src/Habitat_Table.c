@@ -2687,6 +2687,8 @@ const u16 gHackHabitatWatersEdge1[] =
 const u16 gHackHabitatWatersEdge2[] =
 {
 	SPECIES_CLODSIRE,
+	SPECIES_ARAWANA_BLUE,
+	SPECIES_ARAWANA_RED,
 };
 
 const u16 gHackHabitatSea1[] =
@@ -2718,6 +2720,7 @@ const u16 gHackHabitatCave2[] =
 	SPECIES_GLIMMET,
 	SPECIES_GLIMMORA,
 	SPECIES_DUDUNSPARCE,
+	SPECIES_IWAOROCHI,
 };
 
 const u16 gHackHabitatMountain1[] =
@@ -2872,6 +2875,45 @@ const u16 gHackHabitatRare9[] =
 {
 	SPECIES_PECHARUNT,
 	SPECIES_KAGENONAKANI,
+	SPECIES_TSUKINOUROKO,
+	SPECIES_TSUKIRIRU,
+};
+
+const u16 gHackHabitatRare10[] =
+{
+	SPECIES_UISHIRUSHI,
+	SPECIES_SHIDAREAME,
+	SPECIES_MILKIHEART,
+	SPECIES_NAOGANE,
+};
+
+const u16 gHackHabitatRare11[] =
+{
+	SPECIES_KAIRIPULSE,
+	SPECIES_RIKKAYUKI,
+	SPECIES_SHIIBARA,
+	SPECIES_RANKITSUNE,
+};
+
+const u16 gHackHabitatRare12[] =
+{
+	SPECIES_ICHIGOBERRY,
+	SPECIES_KOSHAL,
+	SPECIES_ORCAISER,
+	SPECIES_BUBUCHIFU,
+};
+
+const u16 gHackHabitatRare13[] =
+{
+	SPECIES_OMOCHIFUWA,
+	SPECIES_PACHINIKUSU,
+	SPECIES_DANKURUO,
+	SPECIES_SUTEGORADON,
+};
+
+const u16 gHackHabitatRare14[] =
+{
+	SPECIES_PURECHIRUDO,
 };
 /* HACK_HABITAT_EXTRA END */
 
@@ -3312,6 +3354,11 @@ const struct HabitatPage gRarePages[] =
 	{gHackHabitatRare7, ARRAY_COUNT(gHackHabitatRare7)}, // HACK_HABITAT_EXTRA
 	{gHackHabitatRare8, ARRAY_COUNT(gHackHabitatRare8)}, // HACK_HABITAT_EXTRA
 	{gHackHabitatRare9, ARRAY_COUNT(gHackHabitatRare9)}, // HACK_HABITAT_EXTRA
+	{gHackHabitatRare10, ARRAY_COUNT(gHackHabitatRare10)}, // HACK_HABITAT_EXTRA
+	{gHackHabitatRare11, ARRAY_COUNT(gHackHabitatRare11)}, // HACK_HABITAT_EXTRA
+	{gHackHabitatRare12, ARRAY_COUNT(gHackHabitatRare12)}, // HACK_HABITAT_EXTRA
+	{gHackHabitatRare13, ARRAY_COUNT(gHackHabitatRare13)}, // HACK_HABITAT_EXTRA
+	{gHackHabitatRare14, ARRAY_COUNT(gHackHabitatRare14)}, // HACK_HABITAT_EXTRA
 };
 
 const struct Habitat gHabitatPtrsTable[9] =

@@ -20,5 +20,5 @@
 
 //#define INCLUDE_FOOTPRINTS //If you uncomment this line, make sure to uncomment gMonFootprintTable in "repoints", and remove the footprint remover in "bytereplacement"
 
-#define NUM_TMSHMS 128
+#define NUM_TMSHMS 135 //[hack] patches/0862 128→135（TM121〜127 を足してひでんを 128〜135 へ）
 #define NUM_MOVE_TUTOR_MOVES 152

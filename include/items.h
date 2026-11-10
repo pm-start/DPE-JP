@@ -818,6 +818,7 @@ enum
 #define ITEM_SERIOUS_MINT 0x305
 #define ITEM_HISUI_ROCK 0x306 //[hack] patches/0241 ヒスイのいし（CFRU の include/constants/items.h と同じ番号・CFRU の patches/0008）
 #define ITEM_ALOLA_STONE 0x358 //[hack] patches/0327 アローラのいし（CFRU の include/constants/items.h と同じ番号）
+#define ITEM_GARCHOMPITE_X 0x367 //[hack] patches/0813 ガブリアスナイトX（CFRU の include/constants/items.h と同じ番号・進化の表が使う）
 
 #define ITEMS_COUNT (ITEM_SERIOUS_MINT + 1)
 

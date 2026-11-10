@@ -256,7 +256,7 @@ const struct CompressedSpritePalette gMonPaletteTable[NUM_SPECIES] =
 	[SPECIES_LUGIA] =                {gFrontSprite249LugiaPal, SPECIES_LUGIA, 0x0},
 	[SPECIES_HO_OH] =                {gFrontSprite250HoOhPal, SPECIES_HO_OH, 0x0},
 	[SPECIES_CELEBI] =               {gFrontSprite251CelebiPal, SPECIES_CELEBI, 0x0},
-	[252] =                          {gFrontSprite252Pal, 0xfc, 0x0},
+	[252] =                          {gFrontSprite025PikachuFPal, 0xfc, 0x0}, //[hack] patches/0944 ♀ピカチュウの絵の置き場（旧 ? の空き番号 252＝HACK_SPECIES_PIKACHU_F・新しい種族番号は足さない・src/updated_code.c の TryGetFemaleGenderedSpecies）
 	[253] =                          {gFrontSprite252Pal, 0xfd, 0x0},
 	[254] =                          {gFrontSprite252Pal, 0xfe, 0x0},
 	[255] =                          {gFrontSprite252Pal, 0xff, 0x0},
@@ -1507,4 +1507,49 @@ const struct CompressedSpritePalette gMonPaletteTable[NUM_SPECIES] =
 /* GIGAMINE BEGIN (tools/custom_mon/gigamine/build_gigamine.py・やん之助) */
 	[SPECIES_GIGAMINE] = {gFrontSpriteGigaminePal, SPECIES_GIGAMINE, 0},
 /* GIGAMINE END */
+/* TSUKINOUROKO BEGIN (tools/custom_mon/tsukinouroko/build_tsukinouroko.py) */
+	[SPECIES_TSUKINOUROKO] = {gFrontSpriteTsukinourokoPal, SPECIES_TSUKINOUROKO, 0},
+/* TSUKINOUROKO END */
+/* VANILLUXE_DEV BEGIN (tools/custom_mon/vanilluxe_dev/build_vanilluxe_dev.py) */
+	[SPECIES_VANILLUXE_DEV] = {gFrontSpriteVanilluxeDevPal, SPECIES_VANILLUXE_DEV, 0},
+/* VANILLUXE_DEV END */
+/* WATASHI_LEGENDS BEGIN (tools/custom_mon/watashitachi_legends/build_legends.py) */
+	[SPECIES_TSUKIRIRU] = {gFrontSpriteTsukiriruPal, SPECIES_TSUKIRIRU, 0},
+	[SPECIES_UISHIRUSHI] = {gFrontSpriteUishirushiPal, SPECIES_UISHIRUSHI, 0},
+	[SPECIES_SHIDAREAME] = {gFrontSpriteShidareamePal, SPECIES_SHIDAREAME, 0},
+	[SPECIES_MILKIHEART] = {gFrontSpriteMilkiheartPal, SPECIES_MILKIHEART, 0},
+	[SPECIES_NAOGANE] = {gFrontSpriteNaoganePal, SPECIES_NAOGANE, 0},
+	[SPECIES_KAIRIPULSE] = {gFrontSpriteKairipulsePal, SPECIES_KAIRIPULSE, 0},
+	[SPECIES_RIKKAYUKI] = {gFrontSpriteRikkayukiPal, SPECIES_RIKKAYUKI, 0},
+	[SPECIES_SHIIBARA] = {gFrontSpriteShiibaraPal, SPECIES_SHIIBARA, 0},
+	[SPECIES_RANKITSUNE] = {gFrontSpriteRankitsunePal, SPECIES_RANKITSUNE, 0},
+	[SPECIES_ICHIGOBERRY] = {gFrontSpriteIchigoberryPal, SPECIES_ICHIGOBERRY, 0},
+/* WATASHI_LEGENDS END */
+/* DEBUG_MON BEGIN (tools/custom_mon/debug_mon/build_debug_mon.py) */
+	[SPECIES_DEBUGMON_MAX] =               {gFrontSprite458LuxrayPal, SPECIES_DEBUGMON_MAX, 0x0},
+	[SPECIES_DEBUGMON_MIN] =               {gFrontSprite458LuxrayPal, SPECIES_DEBUGMON_MIN, 0x0},
+/* DEBUG_MON END */
+/* IWA_GACHI BEGIN (tools/custom_mon/iwaorochi_gachigoras/build_fakemon.py) */
+	[SPECIES_IWAOROCHI] = {gFrontSpriteIwaorochiPal, SPECIES_IWAOROCHI, 0},
+	[SPECIES_GENSHIGACHIGORAS] = {gFrontSpriteGenshigachigorasPal, SPECIES_GENSHIGACHIGORAS, 0},
+/* IWA_GACHI END */
+/* ARAWANA BEGIN (tools/custom_mon/arawana/build_arawana.py・やん之助) */
+	[SPECIES_ARAWANA_BLUE] = {gFrontSpriteArawanaBluePal, SPECIES_ARAWANA_BLUE, 0},
+	[SPECIES_ARAWANA_RED] = {gFrontSpriteArawanaRedPal, SPECIES_ARAWANA_RED, 0},
+/* ARAWANA END */
+/* ORCAISER BEGIN (tools/custom_mon/orcaiser/build_orcaiser.py) */
+	[SPECIES_KOSHAL] = {gFrontSpriteKoshalPal, SPECIES_KOSHAL, 0},
+	[SPECIES_ORCAISER] = {gFrontSpriteOrcaiserPal, SPECIES_ORCAISER, 0},
+	[SPECIES_GENSHIORCAISER] = {gFrontSpriteGenshiOrcaiserPal, SPECIES_GENSHIORCAISER, 0},
+/* ORCAISER END */
+/* SILVA_MOCHI BEGIN (tools/custom_mon/silva_mochi/build_silva_mochi.py・Silva) */
+	[SPECIES_BUBUCHIFU] = {gFrontSpriteBubuchifuPal, SPECIES_BUBUCHIFU, 0},
+	[SPECIES_OMOCHIFUWA] = {gFrontSpriteOmochifuwaPal, SPECIES_OMOCHIFUWA, 0},
+/* SILVA_MOCHI END */
+/* KASEKIMERA BEGIN (tools/custom_mon/kasekimera/build_kasekimera.py・やん之助) */
+	[SPECIES_PACHINIKUSU] = {gFrontSpritePachinikusuPal, SPECIES_PACHINIKUSU, 0},
+	[SPECIES_DANKURUO] = {gFrontSpriteDankuruoPal, SPECIES_DANKURUO, 0},
+	[SPECIES_SUTEGORADON] = {gFrontSpriteSutegoradonPal, SPECIES_SUTEGORADON, 0},
+	[SPECIES_PURECHIRUDO] = {gFrontSpritePurechirudoPal, SPECIES_PURECHIRUDO, 0},
+/* KASEKIMERA END */
 };

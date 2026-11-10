@@ -256,7 +256,7 @@ const struct CompressedSpriteSheet gMonBackPicTable[NUM_SPECIES] =
 	[SPECIES_LUGIA] =                {gBackShinySprite249LugiaTiles, (64 * 64) / 2, SPECIES_LUGIA},
 	[SPECIES_HO_OH] =                {gBackShinySprite250HoOhTiles, (64 * 64) / 2, SPECIES_HO_OH},
 	[SPECIES_CELEBI] =               {gBackShinySprite251CelebiTiles, (64 * 64) / 2, SPECIES_CELEBI},
-	[252] =                          {gBackShinySprite252Tiles, (64 * 64) / 2, 0xfc},
+	[252] =                          {gBackShinySprite025PikachuFTiles, (64 * 64) / 2, 0xfc}, //[hack] patches/0944 ♀ピカチュウの絵の置き場（旧 ? の空き番号 252＝HACK_SPECIES_PIKACHU_F・新しい種族番号は足さない・src/updated_code.c の TryGetFemaleGenderedSpecies）
 	[253] =                          {gBackShinySprite252Tiles, (64 * 64) / 2, 0xfd},
 	[254] =                          {gBackShinySprite252Tiles, (64 * 64) / 2, 0xfe},
 	[255] =                          {gBackShinySprite252Tiles, (64 * 64) / 2, 0xff},
@@ -712,6 +712,7 @@ const struct CompressedSpriteSheet gMonBackPicTable[NUM_SPECIES] =
 	[SPECIES_UNFEZANT_F] =           {gBackShinySprite703UnfezantFTiles, (64 * 64) / 2, SPECIES_UNFEZANT_F},
 	[SPECIES_FRILLISH_F] =           {gBackShinySprite704FrillishFTiles, (64 * 64) / 2, SPECIES_FRILLISH_F},
 	[SPECIES_JELLICENT_F] =          {gBackShinySprite705JellicentFTiles, (64 * 64) / 2, SPECIES_JELLICENT_F},
+	[SPECIES_SHADOW_WARRIOR] =       {gBackShinySprite000NoneTiles/*gBackShinySprite706ShadowWarriorTiles*/, (64 * 64) / 2, SPECIES_SHADOW_WARRIOR},
 	[SPECIES_BURMY_SANDY] =          {gBackShinySprite707BurmySandyTiles, (64 * 64) / 2, SPECIES_BURMY_SANDY},
 	[SPECIES_BURMY_TRASH] =          {gBackShinySprite708BurmyTrashTiles, (64 * 64) / 2, SPECIES_BURMY_TRASH},
 	[SPECIES_WORMADAM_SANDY] =       {gBackShinySprite709WormadamSandyTiles, (64 * 64) / 2, SPECIES_WORMADAM_SANDY},
@@ -728,17 +729,17 @@ const struct CompressedSpriteSheet gMonBackPicTable[NUM_SPECIES] =
 	[SPECIES_ARCEUS_FIGHT] =         {gBackShinySprite546ArceusTiles, (64 * 64) / 2, SPECIES_ARCEUS_FIGHT},
 	[SPECIES_ARCEUS_FLYING] =        {gBackShinySprite546ArceusTiles, (64 * 64) / 2, SPECIES_ARCEUS_FLYING},
 	[SPECIES_ARCEUS_POISON] =        {gBackShinySprite546ArceusTiles, (64 * 64) / 2, SPECIES_ARCEUS_POISON},
-	[SPECIES_ARCEUS_GROUND] =        {gBackShinySprite546ArceusTiles, (64 * 64) / 2, SPECIES_ARCEUS_GROUND},
+	[SPECIES_ARCEUS_GROUND] =        {gBackShinySprite723ArceusGroundTiles, (64 * 64) / 2, SPECIES_ARCEUS_GROUND},
 	[SPECIES_ARCEUS_ROCK] =          {gBackShinySprite546ArceusTiles, (64 * 64) / 2, SPECIES_ARCEUS_ROCK},
 	[SPECIES_ARCEUS_BUG] =           {gBackShinySprite546ArceusTiles, (64 * 64) / 2, SPECIES_ARCEUS_BUG},
 	[SPECIES_ARCEUS_GHOST] =         {gBackShinySprite546ArceusTiles, (64 * 64) / 2, SPECIES_ARCEUS_GHOST},
-	[SPECIES_ARCEUS_STEEL] =         {gBackShinySprite546ArceusTiles, (64 * 64) / 2, SPECIES_ARCEUS_STEEL},
+	[SPECIES_ARCEUS_STEEL] =         {gBackShinySprite727ArceusSteelTiles, (64 * 64) / 2, SPECIES_ARCEUS_STEEL},
 	[SPECIES_ARCEUS_FIRE] =          {gBackShinySprite546ArceusTiles, (64 * 64) / 2, SPECIES_ARCEUS_FIRE},
 	[SPECIES_ARCEUS_WATER] =         {gBackShinySprite546ArceusTiles, (64 * 64) / 2, SPECIES_ARCEUS_WATER},
 	[SPECIES_ARCEUS_GRASS] =         {gBackShinySprite546ArceusTiles, (64 * 64) / 2, SPECIES_ARCEUS_GRASS},
 	[SPECIES_ARCEUS_ELECTRIC] =      {gBackShinySprite546ArceusTiles, (64 * 64) / 2, SPECIES_ARCEUS_ELECTRIC},
 	[SPECIES_ARCEUS_PSYCHIC] =       {gBackShinySprite546ArceusTiles, (64 * 64) / 2, SPECIES_ARCEUS_PSYCHIC},
-	[SPECIES_ARCEUS_ICE] =           {gBackShinySprite546ArceusTiles, (64 * 64) / 2, SPECIES_ARCEUS_ICE},
+	[SPECIES_ARCEUS_ICE] =           {gBackShinySprite733ArceusIceTiles, (64 * 64) / 2, SPECIES_ARCEUS_ICE},
 	[SPECIES_ARCEUS_DRAGON] =        {gBackShinySprite546ArceusTiles, (64 * 64) / 2, SPECIES_ARCEUS_DRAGON},
 	[SPECIES_ARCEUS_DARK] =          {gBackShinySprite546ArceusTiles, (64 * 64) / 2, SPECIES_ARCEUS_DARK},
 	[SPECIES_BASCULIN_BLUE] =        {gBackShinySprite736BasculinBlueTiles, (64 * 64) / 2, SPECIES_BASCULIN_BLUE},
@@ -749,8 +750,8 @@ const struct CompressedSpriteSheet gMonBackPicTable[NUM_SPECIES] =
 	[SPECIES_SAWSBUCK_SUMMER] =      {gBackShinySprite741SawsbuckSummerTiles, (64 * 64) / 2, SPECIES_SAWSBUCK_SUMMER},
 	[SPECIES_SAWSBUCK_AUTUMN] =      {gBackShinySprite742SawsbuckAutumnTiles, (64 * 64) / 2, SPECIES_SAWSBUCK_AUTUMN},
 	[SPECIES_SAWSBUCK_WINTER] =      {gBackShinySprite743SawsbuckWinterTiles, (64 * 64) / 2, SPECIES_SAWSBUCK_WINTER},
-	[SPECIES_HIPPOPOTAS_F] =         {gBackShinySprite502HippopotasTiles, (64 * 64) / 2, SPECIES_HIPPOPOTAS_F},
-	[SPECIES_HIPPOWDON_F] =          {gBackShinySprite503HippowdonTiles, (64 * 64) / 2, SPECIES_HIPPOWDON_F},
+	[SPECIES_HIPPOPOTAS_F] =         {gBackShinySprite744HippopotasFTiles, (64 * 64) / 2, SPECIES_HIPPOPOTAS_F},
+	[SPECIES_HIPPOWDON_F] =          {gBackShinySprite745HippowdonFTiles, (64 * 64) / 2, SPECIES_HIPPOWDON_F},
 	[SPECIES_MELOETTA_PIROUETTE] =   {gBackShinySprite746MeloettaPirouetteTiles, (64 * 64) / 2, SPECIES_MELOETTA_PIROUETTE},
 	[SPECIES_GENESECT_SHOCK] =       {gBackShinySprite702GenesectTiles, (64 * 64) / 2, SPECIES_GENESECT_SHOCK},
 	[SPECIES_GENESECT_BURN] =        {gBackShinySprite702GenesectTiles, (64 * 64) / 2, SPECIES_GENESECT_BURN},
@@ -847,12 +848,12 @@ const struct CompressedSpriteSheet gMonBackPicTable[NUM_SPECIES] =
 	[SPECIES_ASHGRENINJA] =          {gBackShinySprite839AshgreninjaTiles, (64 * 64) / 2, SPECIES_ASHGRENINJA},
 	[SPECIES_FLABEBE_BLUE] =         {gBackShinySprite777FlabebeTiles, (64 * 64) / 2, SPECIES_FLABEBE_BLUE},
 	[SPECIES_FLABEBE_ORANGE] =       {gBackShinySprite777FlabebeTiles, (64 * 64) / 2, SPECIES_FLABEBE_ORANGE},
-	[SPECIES_FLABEBE_YELLOW] =       {gBackShinySprite777FlabebeTiles, (64 * 64) / 2, SPECIES_FLABEBE_YELLOW},
-	[SPECIES_FLABEBE_WHITE] =        {gBackShinySprite777FlabebeTiles, (64 * 64) / 2, SPECIES_FLABEBE_WHITE},
+	[SPECIES_FLABEBE_YELLOW] =       {gBackShinySprite842FlabebeYellowTiles, (64 * 64) / 2, SPECIES_FLABEBE_YELLOW},
+	[SPECIES_FLABEBE_WHITE] =        {gBackShinySprite843FlabebeWhiteTiles, (64 * 64) / 2, SPECIES_FLABEBE_WHITE},
 	[SPECIES_FLOETTE_BLUE] =         {gBackShinySprite778FloetteTiles, (64 * 64) / 2, SPECIES_FLOETTE_BLUE},
 	[SPECIES_FLOETTE_ORANGE] =       {gBackShinySprite778FloetteTiles, (64 * 64) / 2, SPECIES_FLOETTE_ORANGE},
-	[SPECIES_FLOETTE_YELLOW] =       {gBackShinySprite778FloetteTiles, (64 * 64) / 2, SPECIES_FLOETTE_YELLOW},
-	[SPECIES_FLOETTE_WHITE] =        {gBackShinySprite778FloetteTiles, (64 * 64) / 2, SPECIES_FLOETTE_WHITE},
+	[SPECIES_FLOETTE_YELLOW] =       {gBackShinySprite846FloetteYellowTiles, (64 * 64) / 2, SPECIES_FLOETTE_YELLOW},
+	[SPECIES_FLOETTE_WHITE] =        {gBackShinySprite847FloetteWhiteTiles, (64 * 64) / 2, SPECIES_FLOETTE_WHITE},
 	[SPECIES_FLOETTE_ETERNAL] =      {gBackShinySprite848FloetteEternalTiles, (64 * 64) / 2, SPECIES_FLOETTE_ETERNAL},
 	[SPECIES_FLORGES_BLUE] =         {gBackShinySprite779FlorgesTiles, (64 * 64) / 2, SPECIES_FLORGES_BLUE},
 	[SPECIES_FLORGES_ORANGE] =       {gBackShinySprite779FlorgesTiles, (64 * 64) / 2, SPECIES_FLORGES_ORANGE},
@@ -1041,7 +1042,9 @@ const struct CompressedSpriteSheet gMonBackPicTable[NUM_SPECIES] =
 	[SPECIES_GOLEM_A] =              {gBackShinySprite1033GolemATiles, (64 * 64) / 2, SPECIES_GOLEM_A},
 	[SPECIES_GRIMER_A] =             {gBackShinySprite1034GrimerATiles, (64 * 64) / 2, SPECIES_GRIMER_A},
 	[SPECIES_MUK_A] =                {gBackShinySprite1035MukATiles, (64 * 64) / 2, SPECIES_MUK_A},
+	[SPECIES_EXEGGCUTE_A] =          {gBackShinySprite102ExeggcuteTiles, (64 * 64) / 2, SPECIES_EXEGGCUTE_A},
 	[SPECIES_EXEGGUTOR_A] =          {gBackShinySprite1037ExeggutorATiles, (64 * 64) / 2, SPECIES_EXEGGUTOR_A},
+	[SPECIES_CUBONE_A] =             {gBackShinySprite104CuboneTiles, (64 * 64) / 2, SPECIES_CUBONE_A},
 	[SPECIES_MAROWAK_A] =            {gBackShinySprite1039MarowakATiles, (64 * 64) / 2, SPECIES_MAROWAK_A},
 	[SPECIES_DEOXYS_ATTACK] =        {gBackShinySprite1040DeoxysAttackTiles, (64 * 64) / 2, SPECIES_DEOXYS_ATTACK},
 	[SPECIES_DEOXYS_DEFENSE] =       {gBackShinySprite1041DeoxysDefenseTiles, (64 * 64) / 2, SPECIES_DEOXYS_DEFENSE},
@@ -1069,12 +1072,12 @@ const struct CompressedSpriteSheet gMonBackPicTable[NUM_SPECIES] =
 	[SPECIES_SILVALLY_DARK] =        {gBackShinySprite990SilvallyTiles, (64 * 64) / 2, SPECIES_SILVALLY_DARK},
 	[SPECIES_SILVALLY_FAIRY] =       {gBackShinySprite990SilvallyTiles, (64 * 64) / 2, SPECIES_SILVALLY_FAIRY},
 	[SPECIES_MINIOR_RED] =           {gBackShinySprite1065MiniorRedTiles, (64 * 64) / 2, SPECIES_MINIOR_RED},
-	[SPECIES_MINIOR_BLUE] =          {gBackShinySprite1065MiniorRedTiles, (64 * 64) / 2, SPECIES_MINIOR_BLUE},
-	[SPECIES_MINIOR_ORANGE] =        {gBackShinySprite1065MiniorRedTiles, (64 * 64) / 2, SPECIES_MINIOR_ORANGE},
-	[SPECIES_MINIOR_YELLOW] =        {gBackShinySprite1065MiniorRedTiles, (64 * 64) / 2, SPECIES_MINIOR_YELLOW},
-	[SPECIES_MINIOR_INDIGO] =        {gBackShinySprite1065MiniorRedTiles, (64 * 64) / 2, SPECIES_MINIOR_INDIGO},
-	[SPECIES_MINIOR_GREEN] =         {gBackShinySprite1065MiniorRedTiles, (64 * 64) / 2, SPECIES_MINIOR_GREEN},
-	[SPECIES_MINIOR_VIOLET] =        {gBackShinySprite1065MiniorRedTiles, (64 * 64) / 2, SPECIES_MINIOR_VIOLET},
+	[SPECIES_MINIOR_BLUE] =          {gBackShinySprite1066MiniorBlueTiles, (64 * 64) / 2, SPECIES_MINIOR_BLUE},
+	[SPECIES_MINIOR_ORANGE] =        {gBackShinySprite1067MiniorOrangeTiles, (64 * 64) / 2, SPECIES_MINIOR_ORANGE},
+	[SPECIES_MINIOR_YELLOW] =        {gBackShinySprite1068MiniorYellowTiles, (64 * 64) / 2, SPECIES_MINIOR_YELLOW},
+	[SPECIES_MINIOR_INDIGO] =        {gBackShinySprite1069MiniorIndigoTiles, (64 * 64) / 2, SPECIES_MINIOR_INDIGO},
+	[SPECIES_MINIOR_GREEN] =         {gBackShinySprite1070MiniorGreenTiles, (64 * 64) / 2, SPECIES_MINIOR_GREEN},
+	[SPECIES_MINIOR_VIOLET] =        {gBackShinySprite1071MiniorVioletTiles, (64 * 64) / 2, SPECIES_MINIOR_VIOLET},
 	[SPECIES_MIMIKYU_BUSTED] =       {gBackShinySprite1072MimikyuBustedTiles, (64 * 64) / 2, SPECIES_MIMIKYU_BUSTED},
 	[SPECIES_MAGEARNA_P] =           {gBackShinySprite1073MagearnaPTiles, (64 * 64) / 2, SPECIES_MAGEARNA_P},
 	[SPECIES_POIPOLE] =              {gBackShinySprite1074PoipoleTiles, (64 * 64) / 2, SPECIES_POIPOLE},
@@ -1221,6 +1224,7 @@ const struct CompressedSpriteSheet gMonBackPicTable[NUM_SPECIES] =
 	[SPECIES_SLOWPOKE_G] =           {gBackShinySprite1215SlowpokeGTiles, (64 * 64) / 2, SPECIES_SLOWPOKE_G},
 	[SPECIES_SLOWBRO_G] =            {gBackShinySprite1216SlowbroGTiles, (64 * 64) / 2, SPECIES_SLOWBRO_G},
 	[SPECIES_FARFETCHD_G] =          {gBackShinySprite1217FarfetchdGTiles, (64 * 64) / 2, SPECIES_FARFETCHD_G},
+	[SPECIES_KOFFING_G] =            {gBackShinySprite109KoffingTiles, (64 * 64) / 2, SPECIES_KOFFING_G},
 	[SPECIES_WEEZING_G] =            {gBackShinySprite1219WeezingGTiles, (64 * 64) / 2, SPECIES_WEEZING_G},
 	[SPECIES_MR_MIME_G] =            {gBackShinySprite1220MrMimeGTiles, (64 * 64) / 2, SPECIES_MR_MIME_G},
 	[SPECIES_ARTICUNO_G] =           {gBackShinySprite1221ArticunoGTiles, (64 * 64) / 2, SPECIES_ARTICUNO_G},
@@ -1230,6 +1234,7 @@ const struct CompressedSpriteSheet gMonBackPicTable[NUM_SPECIES] =
 	[SPECIES_CORSOLA_G] =            {gBackShinySprite1225CorsolaGTiles, (64 * 64) / 2, SPECIES_CORSOLA_G},
 	[SPECIES_ZIGZAGOON_G] =          {gBackShinySprite1226ZigzagoonGTiles, (64 * 64) / 2, SPECIES_ZIGZAGOON_G},
 	[SPECIES_LINOONE_G] =            {gBackShinySprite1227LinooneGTiles, (64 * 64) / 2, SPECIES_LINOONE_G},
+	[SPECIES_MIME_JR_G] =            {gBackShinySprite492MimeJrTiles, (64 * 64) / 2, SPECIES_MIME_JR_G},
 	[SPECIES_DARUMAKA_G] =           {gBackShinySprite1229DarumakaGTiles, (64 * 64) / 2, SPECIES_DARUMAKA_G},
 	[SPECIES_DARMANITAN_G] =         {gBackShinySprite1230DarmanitanGTiles, (64 * 64) / 2, SPECIES_DARMANITAN_G},
 	[SPECIES_DARMANITAN_G_ZEN] =     {gBackShinySprite1231DarmanitanGZenTiles, (64 * 64) / 2, SPECIES_DARMANITAN_G_ZEN},
@@ -1503,4 +1508,49 @@ const struct CompressedSpriteSheet gMonBackPicTable[NUM_SPECIES] =
 /* GIGAMINE BEGIN (tools/custom_mon/gigamine/build_gigamine.py・やん之助) */
 	[SPECIES_GIGAMINE] = {gBackShinySpriteGigamineTiles, 2048, SPECIES_GIGAMINE},
 /* GIGAMINE END */
+/* TSUKINOUROKO BEGIN (tools/custom_mon/tsukinouroko/build_tsukinouroko.py) */
+	[SPECIES_TSUKINOUROKO] = {gBackShinySpriteTsukinourokoTiles, 2048, SPECIES_TSUKINOUROKO},
+/* TSUKINOUROKO END */
+/* VANILLUXE_DEV BEGIN (tools/custom_mon/vanilluxe_dev/build_vanilluxe_dev.py) */
+	[SPECIES_VANILLUXE_DEV] = {gBackShinySpriteVanilluxeDevTiles, 2048, SPECIES_VANILLUXE_DEV},
+/* VANILLUXE_DEV END */
+/* WATASHI_LEGENDS BEGIN (tools/custom_mon/watashitachi_legends/build_legends.py) */
+	[SPECIES_TSUKIRIRU] = {gBackShinySpriteTsukiriruTiles, 2048, SPECIES_TSUKIRIRU},
+	[SPECIES_UISHIRUSHI] = {gBackShinySpriteUishirushiTiles, 2048, SPECIES_UISHIRUSHI},
+	[SPECIES_SHIDAREAME] = {gBackShinySpriteShidareameTiles, 2048, SPECIES_SHIDAREAME},
+	[SPECIES_MILKIHEART] = {gBackShinySpriteMilkiheartTiles, 2048, SPECIES_MILKIHEART},
+	[SPECIES_NAOGANE] = {gBackShinySpriteNaoganeTiles, 2048, SPECIES_NAOGANE},
+	[SPECIES_KAIRIPULSE] = {gBackShinySpriteKairipulseTiles, 2048, SPECIES_KAIRIPULSE},
+	[SPECIES_RIKKAYUKI] = {gBackShinySpriteRikkayukiTiles, 2048, SPECIES_RIKKAYUKI},
+	[SPECIES_SHIIBARA] = {gBackShinySpriteShiibaraTiles, 2048, SPECIES_SHIIBARA},
+	[SPECIES_RANKITSUNE] = {gBackShinySpriteRankitsuneTiles, 2048, SPECIES_RANKITSUNE},
+	[SPECIES_ICHIGOBERRY] = {gBackShinySpriteIchigoberryTiles, 2048, SPECIES_ICHIGOBERRY},
+/* WATASHI_LEGENDS END */
+/* DEBUG_MON BEGIN (tools/custom_mon/debug_mon/build_debug_mon.py) */
+	[SPECIES_DEBUGMON_MAX] =               {gBackShinySprite458LuxrayTiles, (64 * 64) / 2, SPECIES_DEBUGMON_MAX},
+	[SPECIES_DEBUGMON_MIN] =               {gBackShinySprite458LuxrayTiles, (64 * 64) / 2, SPECIES_DEBUGMON_MIN},
+/* DEBUG_MON END */
+/* IWA_GACHI BEGIN (tools/custom_mon/iwaorochi_gachigoras/build_fakemon.py) */
+	[SPECIES_IWAOROCHI] = {gBackShinySpriteIwaorochiTiles, 2048, SPECIES_IWAOROCHI},
+	[SPECIES_GENSHIGACHIGORAS] = {gBackShinySpriteGenshigachigorasTiles, 2048, SPECIES_GENSHIGACHIGORAS},
+/* IWA_GACHI END */
+/* ARAWANA BEGIN (tools/custom_mon/arawana/build_arawana.py・やん之助) */
+	[SPECIES_ARAWANA_BLUE] = {gBackShinySpriteArawanaBlueTiles, 2048, SPECIES_ARAWANA_BLUE},
+	[SPECIES_ARAWANA_RED] = {gBackShinySpriteArawanaRedTiles, 2048, SPECIES_ARAWANA_RED},
+/* ARAWANA END */
+/* ORCAISER BEGIN (tools/custom_mon/orcaiser/build_orcaiser.py) */
+	[SPECIES_KOSHAL] = {gBackShinySpriteKoshalTiles, 2048, SPECIES_KOSHAL},
+	[SPECIES_ORCAISER] = {gBackShinySpriteOrcaiserTiles, 2048, SPECIES_ORCAISER},
+	[SPECIES_GENSHIORCAISER] = {gBackShinySpriteGenshiOrcaiserTiles, 2048, SPECIES_GENSHIORCAISER},
+/* ORCAISER END */
+/* SILVA_MOCHI BEGIN (tools/custom_mon/silva_mochi/build_silva_mochi.py・Silva) */
+	[SPECIES_BUBUCHIFU] = {gBackShinySpriteBubuchifuTiles, 2048, SPECIES_BUBUCHIFU},
+	[SPECIES_OMOCHIFUWA] = {gBackShinySpriteOmochifuwaTiles, 2048, SPECIES_OMOCHIFUWA},
+/* SILVA_MOCHI END */
+/* KASEKIMERA BEGIN (tools/custom_mon/kasekimera/build_kasekimera.py・やん之助) */
+	[SPECIES_PACHINIKUSU] = {gBackShinySpritePachinikusuTiles, 2048, SPECIES_PACHINIKUSU},
+	[SPECIES_DANKURUO] = {gBackShinySpriteDankuruoTiles, 2048, SPECIES_DANKURUO},
+	[SPECIES_SUTEGORADON] = {gBackShinySpriteSutegoradonTiles, 2048, SPECIES_SUTEGORADON},
+	[SPECIES_PURECHIRUDO] = {gBackShinySpritePurechirudoTiles, 2048, SPECIES_PURECHIRUDO},
+/* KASEKIMERA END */
 };

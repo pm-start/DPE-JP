@@ -256,7 +256,7 @@ const struct CompressedSpritePalette gMonShinyPaletteTable[NUM_SPECIES] =
 	[SPECIES_LUGIA] =                {gBackShinySprite249LugiaPal, SPECIES_LUGIA + NUM_SPECIES, 0x0},
 	[SPECIES_HO_OH] =                {gBackShinySprite250HoOhPal, SPECIES_HO_OH + NUM_SPECIES, 0x0},
 	[SPECIES_CELEBI] =               {gBackShinySprite251CelebiPal, SPECIES_CELEBI + NUM_SPECIES, 0x0},
-	[252] =                          {gBackShinySprite252Pal, 0xfc + NUM_SPECIES, 0x0},
+	[252] =                          {gBackShinySprite025PikachuFPal, 0xfc + NUM_SPECIES, 0x0}, //[hack] patches/0944 ♀ピカチュウの絵の置き場（旧 ? の空き番号 252＝HACK_SPECIES_PIKACHU_F・新しい種族番号は足さない・src/updated_code.c の TryGetFemaleGenderedSpecies）
 	[253] =                          {gBackShinySprite252Pal, 0xfd + NUM_SPECIES, 0x0},
 	[254] =                          {gBackShinySprite252Pal, 0xfe + NUM_SPECIES, 0x0},
 	[255] =                          {gBackShinySprite252Pal, 0xff + NUM_SPECIES, 0x0},
@@ -1507,4 +1507,49 @@ const struct CompressedSpritePalette gMonShinyPaletteTable[NUM_SPECIES] =
 /* GIGAMINE BEGIN (tools/custom_mon/gigamine/build_gigamine.py・やん之助) */
 	[SPECIES_GIGAMINE] = {gBackShinySpriteGigaminePal, SPECIES_GIGAMINE + NUM_SPECIES, 0},
 /* GIGAMINE END */
+/* TSUKINOUROKO BEGIN (tools/custom_mon/tsukinouroko/build_tsukinouroko.py) */
+	[SPECIES_TSUKINOUROKO] = {gBackShinySpriteTsukinourokoPal, SPECIES_TSUKINOUROKO + NUM_SPECIES, 0},
+/* TSUKINOUROKO END */
+/* VANILLUXE_DEV BEGIN (tools/custom_mon/vanilluxe_dev/build_vanilluxe_dev.py) */
+	[SPECIES_VANILLUXE_DEV] = {gBackShinySpriteVanilluxeDevPal, SPECIES_VANILLUXE_DEV + NUM_SPECIES, 0},
+/* VANILLUXE_DEV END */
+/* WATASHI_LEGENDS BEGIN (tools/custom_mon/watashitachi_legends/build_legends.py) */
+	[SPECIES_TSUKIRIRU] = {gBackShinySpriteTsukiriruPal, SPECIES_TSUKIRIRU + NUM_SPECIES, 0},
+	[SPECIES_UISHIRUSHI] = {gBackShinySpriteUishirushiPal, SPECIES_UISHIRUSHI + NUM_SPECIES, 0},
+	[SPECIES_SHIDAREAME] = {gBackShinySpriteShidareamePal, SPECIES_SHIDAREAME + NUM_SPECIES, 0},
+	[SPECIES_MILKIHEART] = {gBackShinySpriteMilkiheartPal, SPECIES_MILKIHEART + NUM_SPECIES, 0},
+	[SPECIES_NAOGANE] = {gBackShinySpriteNaoganePal, SPECIES_NAOGANE + NUM_SPECIES, 0},
+	[SPECIES_KAIRIPULSE] = {gBackShinySpriteKairipulsePal, SPECIES_KAIRIPULSE + NUM_SPECIES, 0},
+	[SPECIES_RIKKAYUKI] = {gBackShinySpriteRikkayukiPal, SPECIES_RIKKAYUKI + NUM_SPECIES, 0},
+	[SPECIES_SHIIBARA] = {gBackShinySpriteShiibaraPal, SPECIES_SHIIBARA + NUM_SPECIES, 0},
+	[SPECIES_RANKITSUNE] = {gBackShinySpriteRankitsunePal, SPECIES_RANKITSUNE + NUM_SPECIES, 0},
+	[SPECIES_ICHIGOBERRY] = {gBackShinySpriteIchigoberryPal, SPECIES_ICHIGOBERRY + NUM_SPECIES, 0},
+/* WATASHI_LEGENDS END */
+/* DEBUG_MON BEGIN (tools/custom_mon/debug_mon/build_debug_mon.py) */
+	[SPECIES_DEBUGMON_MAX] =               {gBackShinySprite458LuxrayPal, SPECIES_DEBUGMON_MAX + NUM_SPECIES, 0x0},
+	[SPECIES_DEBUGMON_MIN] =               {gBackShinySprite458LuxrayPal, SPECIES_DEBUGMON_MIN + NUM_SPECIES, 0x0},
+/* DEBUG_MON END */
+/* IWA_GACHI BEGIN (tools/custom_mon/iwaorochi_gachigoras/build_fakemon.py) */
+	[SPECIES_IWAOROCHI] = {gBackShinySpriteIwaorochiPal, SPECIES_IWAOROCHI + NUM_SPECIES, 0},
+	[SPECIES_GENSHIGACHIGORAS] = {gBackShinySpriteGenshigachigorasPal, SPECIES_GENSHIGACHIGORAS + NUM_SPECIES, 0},
+/* IWA_GACHI END */
+/* ARAWANA BEGIN (tools/custom_mon/arawana/build_arawana.py・やん之助) */
+	[SPECIES_ARAWANA_BLUE] = {gBackShinySpriteArawanaBluePal, SPECIES_ARAWANA_BLUE + NUM_SPECIES, 0},
+	[SPECIES_ARAWANA_RED] = {gBackShinySpriteArawanaRedPal, SPECIES_ARAWANA_RED + NUM_SPECIES, 0},
+/* ARAWANA END */
+/* ORCAISER BEGIN (tools/custom_mon/orcaiser/build_orcaiser.py) */
+	[SPECIES_KOSHAL] = {gBackShinySpriteKoshalPal, SPECIES_KOSHAL + NUM_SPECIES, 0},
+	[SPECIES_ORCAISER] = {gBackShinySpriteOrcaiserPal, SPECIES_ORCAISER + NUM_SPECIES, 0},
+	[SPECIES_GENSHIORCAISER] = {gBackShinySpriteGenshiOrcaiserPal, SPECIES_GENSHIORCAISER + NUM_SPECIES, 0},
+/* ORCAISER END */
+/* SILVA_MOCHI BEGIN (tools/custom_mon/silva_mochi/build_silva_mochi.py・Silva) */
+	[SPECIES_BUBUCHIFU] = {gBackShinySpriteBubuchifuPal, SPECIES_BUBUCHIFU + NUM_SPECIES, 0},
+	[SPECIES_OMOCHIFUWA] = {gBackShinySpriteOmochifuwaPal, SPECIES_OMOCHIFUWA + NUM_SPECIES, 0},
+/* SILVA_MOCHI END */
+/* KASEKIMERA BEGIN (tools/custom_mon/kasekimera/build_kasekimera.py・やん之助) */
+	[SPECIES_PACHINIKUSU] = {gBackShinySpritePachinikusuPal, SPECIES_PACHINIKUSU + NUM_SPECIES, 0},
+	[SPECIES_DANKURUO] = {gBackShinySpriteDankuruoPal, SPECIES_DANKURUO + NUM_SPECIES, 0},
+	[SPECIES_SUTEGORADON] = {gBackShinySpriteSutegoradonPal, SPECIES_SUTEGORADON + NUM_SPECIES, 0},
+	[SPECIES_PURECHIRUDO] = {gBackShinySpritePurechirudoPal, SPECIES_PURECHIRUDO + NUM_SPECIES, 0},
+/* KASEKIMERA END */
 };

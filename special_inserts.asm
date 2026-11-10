@@ -3,7 +3,7 @@
 .thumb
 
 .equ EVOS_PER_MON, 16
-.equ FINAL_DEX_ENTRY, 1028
+.include "hack_dex_count.inc" @ [hack] patches/0338 2026-10-12 .equ FINAL_DEX_ENTRY（CFRU の src/config.h の NATIONAL_DEX_COUNT・tools/build/build_dex_count.py）
 
 @;.equ SEEN_DEX_FLAGS, 0x202583C
 @;.equ CAUGHT_DEX_FLAGS, (SEEN_DEX_FLAGS + (FINAL_DEX_ENTRY / 8) + 1)

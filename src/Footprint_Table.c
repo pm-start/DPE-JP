@@ -1326,6 +1326,51 @@ const u32 gMonFootprintTable[NUM_SPECIES] =
 /* GIGAMINE BEGIN (tools/custom_mon/gigamine/build_gigamine.py・やん之助) */
 	[SPECIES_GIGAMINE] = 0x8c7513c,
 /* GIGAMINE END */
+/* TSUKINOUROKO BEGIN (tools/custom_mon/tsukinouroko/build_tsukinouroko.py) */
+	[SPECIES_TSUKINOUROKO] = 0x8d00c90,
+/* TSUKINOUROKO END */
+/* VANILLUXE_DEV BEGIN (tools/custom_mon/vanilluxe_dev/build_vanilluxe_dev.py) */
+	[SPECIES_VANILLUXE_DEV] = 0x8c3058c,
+/* VANILLUXE_DEV END */
+/* WATASHI_LEGENDS BEGIN (tools/custom_mon/watashitachi_legends/build_legends.py) */
+	[SPECIES_TSUKIRIRU] = 0x8c3058c,
+	[SPECIES_UISHIRUSHI] = 0x8c3058c,
+	[SPECIES_SHIDAREAME] = 0x8c3058c,
+	[SPECIES_MILKIHEART] = 0x8c4895c,
+	[SPECIES_NAOGANE] = 0x8d34c20,
+	[SPECIES_KAIRIPULSE] = 0x8c3058c,
+	[SPECIES_RIKKAYUKI] = 0x8d0cfb4,
+	[SPECIES_SHIIBARA] = 0x8cb6b14,
+	[SPECIES_RANKITSUNE] = 0x8c4a0a8,
+	[SPECIES_ICHIGOBERRY] = 0x8c3058c,
+/* WATASHI_LEGENDS END */
+/* DEBUG_MON BEGIN (tools/custom_mon/debug_mon/build_debug_mon.py) */
+	[SPECIES_DEBUGMON_MAX] = 0x8c3058c,
+	[SPECIES_DEBUGMON_MIN] = 0x8c3058c,
+/* DEBUG_MON END */
+/* IWA_GACHI BEGIN (tools/custom_mon/iwaorochi_gachigoras/build_fakemon.py) */
+	[SPECIES_IWAOROCHI] = 0x8cbe3cc,
+	[SPECIES_GENSHIGACHIGORAS] = 0x8c3058c,
+/* IWA_GACHI END */
+/* ARAWANA BEGIN (tools/custom_mon/arawana/build_arawana.py・やん之助) */
+	[SPECIES_ARAWANA_BLUE] = 0x8c3058c,
+	[SPECIES_ARAWANA_RED] = 0x8c3058c,
+/* ARAWANA END */
+/* ORCAISER BEGIN (tools/custom_mon/orcaiser/build_orcaiser.py) */
+	[SPECIES_KOSHAL] = 0x8cf6024,
+	[SPECIES_ORCAISER] = 0x8cf6a70,
+	[SPECIES_GENSHIORCAISER] = 0x8cf6a70,
+/* ORCAISER END */
+/* SILVA_MOCHI BEGIN (tools/custom_mon/silva_mochi/build_silva_mochi.py・Silva) */
+	[SPECIES_BUBUCHIFU] = 0x8cbee38,
+	[SPECIES_OMOCHIFUWA] = 0x8cbf958,
+/* SILVA_MOCHI END */
+/* KASEKIMERA BEGIN (tools/custom_mon/kasekimera/build_kasekimera.py・やん之助) */
+	[SPECIES_PACHINIKUSU] = 0x8c3058c,
+	[SPECIES_DANKURUO] = 0x8c3058c,
+	[SPECIES_SUTEGORADON] = 0x8c3058c,
+	[SPECIES_PURECHIRUDO] = 0x8c3058c,
+/* KASEKIMERA END */
 };
 
 #endif

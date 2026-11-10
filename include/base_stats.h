@@ -101,6 +101,8 @@ enum
 #define TYPE_BLANK	  0x14
 #define TYPE_FAIRY	  0x17
 #define TYPE_STELLAR  0x18
+#define TYPE_RIL      0x19
+#define TYPE_SHADOW   0x1A
 
 #define MON_MALE       0x00
 #define MON_FEMALE     0xFE

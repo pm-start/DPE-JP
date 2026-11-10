@@ -254,7 +254,7 @@ const u8 gMonIconPaletteIndices[NUM_SPECIES] =
 	[SPECIES_LUGIA] = 0x0,
 	[SPECIES_HO_OH] = 0x1,
 	[SPECIES_CELEBI] = 0x1,
-	[252] = 0x0,
+	[252] = 0x2, //[hack] patches/0944 ♀ピカチュウのアイコンの色（♂ピカチュウと同じ 2）の置き場（旧 ? の空き番号 252＝HACK_SPECIES_PIKACHU_F・新しい種族番号は足さない・src/updated_code.c の TryGetFemaleGenderedSpecies）
 	[253] = 0x0,
 	[254] = 0x0,
 	[255] = 0x0,
@@ -1503,4 +1503,49 @@ const u8 gMonIconPaletteIndices[NUM_SPECIES] =
 /* GIGAMINE BEGIN (tools/custom_mon/gigamine/build_gigamine.py・やん之助) */
 	[SPECIES_GIGAMINE] = 2,
 /* GIGAMINE END */
+/* TSUKINOUROKO BEGIN (tools/custom_mon/tsukinouroko/build_tsukinouroko.py) */
+	[SPECIES_TSUKINOUROKO] = 0x2,
+/* TSUKINOUROKO END */
+/* VANILLUXE_DEV BEGIN (tools/custom_mon/vanilluxe_dev/build_vanilluxe_dev.py) */
+	[SPECIES_VANILLUXE_DEV] = 0,
+/* VANILLUXE_DEV END */
+/* WATASHI_LEGENDS BEGIN (tools/custom_mon/watashitachi_legends/build_legends.py) */
+	[SPECIES_TSUKIRIRU] = 4,
+	[SPECIES_UISHIRUSHI] = 3,
+	[SPECIES_SHIDAREAME] = 4,
+	[SPECIES_MILKIHEART] = 5,
+	[SPECIES_NAOGANE] = 4,
+	[SPECIES_KAIRIPULSE] = 3,
+	[SPECIES_RIKKAYUKI] = 4,
+	[SPECIES_SHIIBARA] = 5,
+	[SPECIES_RANKITSUNE] = 5,
+	[SPECIES_ICHIGOBERRY] = 3,
+/* WATASHI_LEGENDS END */
+/* DEBUG_MON BEGIN (tools/custom_mon/debug_mon/build_debug_mon.py) */
+	[SPECIES_DEBUGMON_MAX] = 0x0,
+	[SPECIES_DEBUGMON_MIN] = 0x0,
+/* DEBUG_MON END */
+/* IWA_GACHI BEGIN (tools/custom_mon/iwaorochi_gachigoras/build_fakemon.py) */
+	[SPECIES_IWAOROCHI] = 2,
+	[SPECIES_GENSHIGACHIGORAS] = 0,
+/* IWA_GACHI END */
+/* ARAWANA BEGIN (tools/custom_mon/arawana/build_arawana.py・やん之助) */
+	[SPECIES_ARAWANA_BLUE] = 3,
+	[SPECIES_ARAWANA_RED] = 3,
+/* ARAWANA END */
+/* ORCAISER BEGIN (tools/custom_mon/orcaiser/build_orcaiser.py) */
+	[SPECIES_KOSHAL] = 0,
+	[SPECIES_ORCAISER] = 0,
+	[SPECIES_GENSHIORCAISER] = 3,
+/* ORCAISER END */
+/* SILVA_MOCHI BEGIN (tools/custom_mon/silva_mochi/build_silva_mochi.py・Silva) */
+	[SPECIES_BUBUCHIFU] = 5,
+	[SPECIES_OMOCHIFUWA] = 5,
+/* SILVA_MOCHI END */
+/* KASEKIMERA BEGIN (tools/custom_mon/kasekimera/build_kasekimera.py・やん之助) */
+	[SPECIES_PACHINIKUSU] = 1,
+	[SPECIES_DANKURUO] = 0,
+	[SPECIES_SUTEGORADON] = 3,
+	[SPECIES_PURECHIRUDO] = 0,
+/* KASEKIMERA END */
 };
